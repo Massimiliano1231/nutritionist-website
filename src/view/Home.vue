@@ -20,9 +20,7 @@
             <p>
              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, maxime! Suscipit, dolorum expedita cumque qui minus facere praesentium fuga quisquam animi modi repellat culpa. Sequi recusandae autem voluptatem enim ut.
             </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore fugiat asperiores vitae porro excepturi dicta iusto ab assumenda aliquid amet similique veritatis, facilis eveniet nam, repudiandae nulla unde officia. Atque.
-            </p>
+
             
             <!-- Bottone -->
           </div>
@@ -33,9 +31,142 @@
 </div>
         </div>
       </section>
+
+      <section class="benefits">
+    <div class="container">
+      <!-- Titolo -->
+      <h2 class="title-p">sei motivi per affidarsi ad un esperto</h2>
+
+      <!-- Lista motivi -->
+      <div class="benefits-list">
+        <div class="benefit" v-for="(benefit, index) in benefits" :key="index">
+          <span class="number">{{ index + 1 }}</span>
+          <p><strong>{{ benefit.bold }}</strong> {{ benefit.text }}</p>
+        </div>
+      </div>
+
+      
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <div class="container">
+      <div class="how-it-works-content">
+        <div class="text-section">
+          <h2 class="title-h">Come funziona?</h2>
+          <div class="step" v-for="(step, index) in steps" :key="index">
+            <h3 class="step-title">{{ step.title }}</h3>
+            <p class="step-description">{{ step.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="strengths">
+    <div class="container">
+      <h2 class="title-s">punti di forza</h2>
+      <div class="strength-card">
+        <button class="arrow left-arrow" @click="prevCard">←</button>
+        <div class="card">
+          <h3 class="card-title">{{ strengths[currentIndex].title }}</h3>
+          <p class="card-description">{{ strengths[currentIndex].description }}</p>
+        </div>
+        <button class="arrow right-arrow" @click="nextCard">→</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="brand">
+        </div>
+        <h2 class="footer-title">Restiamo in contatto</h2>
+        <p class="footer-description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, illum officia soluta aliquid asperiores mollitia culpa exercitationem totam, accusantium hic nobis. Maxime obcaecati, quisquam architecto dignissimos eveniet aperiam possimus eligendi..
+        </p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <img src="/icons/email.svg" alt="Email" class="contact-icon" />
+                  <div>
+              <h3>Email</h3>
+              <p>info@studiogambini.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">📞</span>
+            <div>
+              <h3>Telefono</h3>
+              <p>(+39) 328 8286817</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img src="/icons/whatsapp.svg" alt="WhatsApp" class="contact-icon" />
+                <div>
+              <h3>Whatsapp</h3>
+              <button class="whatsapp-button">Scrivici su WhatsApp</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="footer-bottom">© qui info kaskldnjdksdlskdjlskjleld - Informativa Privacy</p>
+    </div>
+  </footer>    
+
+
     </div>
   </template>
   
+  <script setup>
+
+import { ref } from "vue";
+
+const currentIndex = ref(0);
+
+
+const strengths = [
+  { title: "Dimagrimento efficace", description: "loremddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd." },
+  { title: "Miglioramento delle performance", description: "loremddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" },
+  { title: "Educazione alimentare", description: "loremddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd." },
+  { title: "Piani nutrizionali personalizzati", description: "loremddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" },
+  { title: "Supporto costante", description: "loremddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" }
+];
+
+const nextCard = () => {
+  currentIndex.value = (currentIndex.value + 1) % strengths.length;
+};
+
+const prevCard = () => {
+  currentIndex.value = (currentIndex.value - 1 + strengths.length) % strengths.length;
+};
+
+
+  const benefits = [
+    { bold: "Ti aiuta", text: "a capire quali sono gli errori alimentari più frequenti." },
+    { bold: "Ti guida", text: "nella scelta di una adeguata e corretta alimentazione." },
+    { bold: "Migliora", text: "il tuo stato di salute attraverso un nuovo regime alimentare." },
+    { bold: "Crea", text: "un percorso di educazione alimentare personalizzato." },
+    { bold: "Ti sostiene", text: "psicologicamente per ottenere i risultati sperati." },
+    { bold: "Ti supporta", text: "durante il regime dietetico e il suo mantenimento." }
+  ];
+
+
+  const steps = [
+  { title: "Contattaci e fissa un appuntamento", description: "Prenota una visita per discutere i tuoi obiettivi nutrizionali e ricevere una prima consulenza." },
+  { title: "La prima visita", description: "Un incontro dettagliato per valutare le tue esigenze alimentari e il tuo stile di vita." },
+  { title: "La consegna del piano nutrizionale", description: "Ricevi un piano alimentare personalizzato creato in base alle tue necessità." },
+  { title: "I controlli", description: "Monitoriamo i tuoi progressi e apportiamo eventuali modifiche per ottimizzare i risultati." },
+  { title: "Il mantenimento", description: "Supporto continuo per aiutarti a mantenere uno stile di vita sano e bilanciato nel tempo." }
+];
+
+
+
+  </script>
+
+
+
   <style scoped>
 
   .home {    
@@ -44,6 +175,7 @@
     width: 100vw;
     height: 100vw;
     margin-right: -300px;
+    background-color: #f9f5f0;
   }
     .banner {
         margin-top: 50px;
@@ -73,6 +205,8 @@
     margin-bottom: 1rem; /* Aggiunge spazio tra i paragrafi */
   text-align: left; /* Allinea i paragrafi a sinistra */
   margin-left: 0px; /* Rimuove qualsiasi margine sinistro */
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
 }
 
 .story .image-container {
@@ -83,7 +217,7 @@
 }
 
 .story img {
-  max-width: 90%; /* Riduce la larghezza per evitare margini */
+  max-width: 90%; 
   height: 500px;
 }
   
@@ -97,4 +231,251 @@
   .btn-success:hover {
     background-color: #3e6240;
   }
+
+  .benefits {
+  background-color: #ece2d0; /* Colore sabbia chiaro */
+  padding: 60px 20px;
+  border-radius: 10px;
+}
+
+/* Titolo allineato correttamente */
+.title-p {
+  text-align: left;
+  max-width: 1200px; /* Larghezza uguale alla sezione precedente */
+  margin: 0 auto 40px auto; /* Centra orizzontalmente e aggiunge margine sotto */
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2d2d2d;
+}
+
+/* Griglia Benefici */
+.benefits-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonne */
+  gap: 40px;
+  max-width: 1200px; /* Stessa larghezza del titolo */
+  margin: 0 auto; /* Centra la lista mantenendo l’allineamento a sinistra */
+  padding-left: 0; /* Evita spostamenti indesiderati */
+}
+
+/* Singolo Beneficio */
+.benefit {
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  gap: 15px;
+}
+
+/* Numeri */
+.number {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #9b6647;
+  flex-shrink: 0; /* Mantiene la dimensione costante */
+  width: 30px; /* Assicura l’allineamento */
+  text-align: right;
+}
+
+/* Testo */
+.benefit p {
+  font-size: 1.2rem;
+  color: #3d3d3d;
+  line-height: 1.6;
+}
+
+.how-it-works {
+  background-color: #f9f5f0;
+  padding: 80px 0;
+}
+
+.container {
+  max-width: 1200px; /* Stessa larghezza delle sezioni sopra */
+  margin: 0 auto; /* Centra la sezione */
+}
+
+.title-h {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #2d2d2d;
+  margin-bottom: 40px;
+  text-align: left; /* Titolo allineato a sinistra */
+}
+
+.how-it-works-content {
+  display: flex;
+  flex-direction: column; /* Allinea il testo in colonna */
+  align-items: flex-start; /* Allinea tutto a sinistra */
+}
+
+.step {
+  margin-bottom: 30px;
+}
+
+.step-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3d3d3d;
+  text-align: left;
+}
+
+.step-description {
+  font-size: 1.2rem;
+  color: #777;
+  line-height: 1.6;
+  text-align: left;
+  margin-left: 0; /* Nessuna indentazione, tutto allineato */
+}
+
+
+.strengths {
+  background-color: #f3dfd1; /* Colore simile all'immagine */
+  padding: 80px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title-s {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #2d2d2d;
+  margin-bottom: 40px;
+}
+
+.strength-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #9b6647;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 1.2rem;
+  color: #3d3d3d;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #5b6d58;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.arrow:hover {
+  color: #3e4f40;
+}
+
+.left-arrow {
+  margin-right: 10px;
+}
+
+.right-arrow {
+  margin-left: 10px;
+}
+
+.footer {
+  background-color: #9C887C; /* Verde scuro */
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.brand-box {
+  background: white;
+  color: #4a5a47;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.footer-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-description {
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.whatsapp-button {
+  background-color: white;
+  color: #4a5a47;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.whatsapp-button:hover {
+  background-color: #e6e6e6;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.footer-bottom a {
+  color: white;
+  text-decoration: underline;
+}
+
+
+
+
   </style>

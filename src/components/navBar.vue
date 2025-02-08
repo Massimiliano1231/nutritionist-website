@@ -35,7 +35,6 @@
 </ul>
 
   
-          <a href="#" class="btn btn-success btn-lg">Scrivici su WhatsApp</a>
         </div>
       </div>
     </nav>
