@@ -1,0 +1,7 @@
+<template>
+    <div class="container">
+      <h1>Contatti</h1>
+      <p>Come contattarci.</p>
+    </div>
+  </template>
+  
