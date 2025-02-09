@@ -9,7 +9,7 @@
       <section class="story container py-5">
         <div class="row align-items-center">
           <!-- Testo -->
-          <div class="col-lg-6">
+          <div class="col-lg-7">
             <h2 class="title">La mia storia</h2>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum vitae modi quo, doloremque natus dolorum quis, sed aperiam ab libero obcaecati nemo laboriosam possimus praesentium distinctio beatae eos, ea eius!
@@ -26,7 +26,7 @@
           </div>
   
           <!-- Immagine -->
-          <div class="col-lg-6 image-container">
+          <div class="col-lg-5 image-container">
   <img src="/home_banner.png" alt="Nutrizionista" class="img-fluid rounded">
 </div>
         </div>
@@ -92,26 +92,29 @@
             <img src="/icons/email.svg" alt="Email" class="contact-icon" />
                   <div>
               <h3>Email</h3>
-              <p>info@studiogambini.com</p>
+              <p>domenicosilvestri.1995@gmail.com</p>
             </div>
           </div>
           <div class="contact-item">
             <span class="icon">📞</span>
             <div>
               <h3>Telefono</h3>
-              <p>(+39) 328 8286817</p>
+              <p>(+39) 375 683 6881</p>
             </div>
           </div>
           <div class="contact-item">
             <img src="/icons/whatsapp.svg" alt="WhatsApp" class="contact-icon" />
                 <div>
               <h3>Whatsapp</h3>
-              <button class="whatsapp-button">Scrivici su WhatsApp</button>
+              <a href="https://wa.me/393756836881" target="_blank" class="whatsapp-button">
+                 Scrivici su WhatsApp
+              </a>  
             </div>
           </div>
         </div>
       </div>
-      <p class="footer-bottom">© qui info kaskldnjdksdlskdjlskjleld - Informativa Privacy</p>
+      <p class="footer-bottom">© 2025 DOTT. DOMENICO SILVESTRI - PIANORO (BO). Informativa sulla Privacy
+</p>
     </div>
   </footer>    
 
@@ -189,9 +192,11 @@ const prevCard = () => {
   .story {
   margin-top: 100px; /* Sposta la sezione più in basso */
   max-width: 1200px;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
+
 
 .title {
     margin-bottom: 50px;
@@ -217,7 +222,8 @@ const prevCard = () => {
 }
 
 .story img {
-  max-width: 90%; 
+  margin-right: -250px;
+  max-width: 150%; 
   height: 500px;
 }
   
@@ -452,17 +458,41 @@ const prevCard = () => {
 }
 
 .whatsapp-button {
-  background-color: white;
-  color: #4a5a47;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white; /* Sfondo bianco */
+  color: #3e4f40; /* Testo scuro per contrasto */
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: 2px solid #3e4f40; /* Bordo sottile */
+  padding: 12px 20px;
+  border-radius: 30px; /* Bordi arrotondati */
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Effetto hover */
 .whatsapp-button:hover {
-  background-color: #e6e6e6;
+  background-color: #f9f9f9; /* Leggero grigio */
+  transform: scale(1.05); /* Leggero ingrandimento */
 }
+
+/* Effetto click */
+.whatsapp-button:active {
+  transform: scale(0.98);
+}
+
+/* Icona */
+.whatsapp-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  filter: grayscale(100%) contrast(1.2); /* Rende l'icona più elegante */
+}
+
+
 
 .footer-bottom {
   margin-top: 40px;

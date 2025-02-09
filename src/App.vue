@@ -1,5 +1,6 @@
 <script setup>
 import Navbar from './components/navBar.vue';
+import WhatsAppButton from "./components/WhatsAppButton.vue";
 </script>
 
 <template>
@@ -8,6 +9,7 @@ import Navbar from './components/navBar.vue';
 
     <!-- Qui verranno caricate le varie pagine -->
     <router-view />
+    <WhatsAppButton />
   </div>
 </template>
 
