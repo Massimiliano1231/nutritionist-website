@@ -5,11 +5,13 @@ import WhatsAppButton from "./components/WhatsAppButton.vue";
 
 <template>
   <div>
-    <Navbar />
 
-    <!-- Qui verranno caricate le varie pagine -->
+
+    <Navbar />
     <router-view />
     <WhatsAppButton />
+
+    
   </div>
 </template>
 

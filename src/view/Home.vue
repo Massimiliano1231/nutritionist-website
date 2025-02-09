@@ -1,14 +1,13 @@
 <template>
     <div class="home">
-      <!-- Banner -->
+
       <div class="banner">
         <img src="/home_banner.png" alt="Team di nutrizionisti" class="full-width">
       </div>
   
-      <!-- Sezione "La mia storia" -->
       <section class="story container py-5">
         <div class="row align-items-center">
-          <!-- Testo -->
+
           <div class="col-lg-7">
             <h2 class="title">La mia storia</h2>
             <p>
@@ -21,11 +20,8 @@
              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, maxime! Suscipit, dolorum expedita cumque qui minus facere praesentium fuga quisquam animi modi repellat culpa. Sequi recusandae autem voluptatem enim ut.
             </p>
 
-            
-            <!-- Bottone -->
           </div>
   
-          <!-- Immagine -->
           <div class="col-lg-5 image-container">
   <img src="/home_banner.png" alt="Nutrizionista" class="img-fluid rounded">
 </div>
@@ -34,10 +30,9 @@
 
       <section class="benefits">
     <div class="container">
-      <!-- Titolo -->
+
       <h2 class="title-p">sei motivi per affidarsi ad un esperto</h2>
 
-      <!-- Lista motivi -->
       <div class="benefits-list">
         <div class="benefit" v-for="(benefit, index) in benefits" :key="index">
           <span class="number">{{ index + 1 }}</span>
@@ -190,7 +185,7 @@ const prevCard = () => {
     display: block;
   }
   .story {
-  margin-top: 100px; /* Sposta la sezione più in basso */
+  margin-top: 100px; 
   max-width: 1200px;
   width: 80%;
   margin-left: auto;
@@ -200,25 +195,25 @@ const prevCard = () => {
 
 .title {
     margin-bottom: 50px;
-    margin-top:50px; /* Sposta il titolo più in basso */
+    margin-top:50px; 
   font-size: 2.5rem;
   font-weight: bold;
   color: #2d2d2d;
-  text-align: left; /* Allinea il titolo a sinistra */
+  text-align: left;
 }
 .story p {
-    margin-bottom: 1rem; /* Aggiunge spazio tra i paragrafi */
-  text-align: left; /* Allinea i paragrafi a sinistra */
-  margin-left: 0px; /* Rimuove qualsiasi margine sinistro */
+    margin-bottom: 1rem; 
+  text-align: left;
+  margin-left: 0px; 
   font-family: 'Georgia', serif;
   font-size: 1.2rem;
 }
 
 .story .image-container {
   display: flex;
-  justify-content: flex-end; /* Sposta l'immagine più a destra */
-  align-items: center; /* Mantiene l'immagine più in alto */
-  height: 100%; /* Assicura che l'immagine riempia la colonna */
+  justify-content: flex-end; 
+  align-items: center; 
+  height: 100%; 
 }
 
 .story img {
@@ -239,32 +234,29 @@ const prevCard = () => {
   }
 
   .benefits {
-  background-color: #ece2d0; /* Colore sabbia chiaro */
+  background-color: #ece2d0; 
   padding: 60px 20px;
   border-radius: 10px;
 }
 
-/* Titolo allineato correttamente */
 .title-p {
   text-align: left;
-  max-width: 1200px; /* Larghezza uguale alla sezione precedente */
-  margin: 0 auto 40px auto; /* Centra orizzontalmente e aggiunge margine sotto */
+  max-width: 1200px; 
+  margin: 0 auto 40px auto;
   font-size: 3rem;
   font-weight: bold;
   color: #2d2d2d;
 }
 
-/* Griglia Benefici */
 .benefits-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colonne */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 40px;
-  max-width: 1200px; /* Stessa larghezza del titolo */
-  margin: 0 auto; /* Centra la lista mantenendo l’allineamento a sinistra */
-  padding-left: 0; /* Evita spostamenti indesiderati */
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding-left: 0; 
 }
 
-/* Singolo Beneficio */
 .benefit {
   display: flex;
   align-items: flex-start;
@@ -272,17 +264,15 @@ const prevCard = () => {
   gap: 15px;
 }
 
-/* Numeri */
 .number {
   font-size: 3.5rem;
   font-weight: bold;
   color: #9b6647;
-  flex-shrink: 0; /* Mantiene la dimensione costante */
-  width: 30px; /* Assicura l’allineamento */
+  flex-shrink: 0; 
+  width: 30px;
   text-align: right;
 }
 
-/* Testo */
 .benefit p {
   font-size: 1.2rem;
   color: #3d3d3d;
@@ -295,8 +285,8 @@ const prevCard = () => {
 }
 
 .container {
-  max-width: 1200px; /* Stessa larghezza delle sezioni sopra */
-  margin: 0 auto; /* Centra la sezione */
+  max-width: 1200px;
+  margin: 0 auto; 
 }
 
 .title-h {
@@ -304,13 +294,13 @@ const prevCard = () => {
   font-weight: bold;
   color: #2d2d2d;
   margin-bottom: 40px;
-  text-align: left; /* Titolo allineato a sinistra */
+  text-align: left; 
 }
 
 .how-it-works-content {
   display: flex;
-  flex-direction: column; /* Allinea il testo in colonna */
-  align-items: flex-start; /* Allinea tutto a sinistra */
+  flex-direction: column; 
+  align-items: flex-start; 
 }
 
 .step {
@@ -329,12 +319,12 @@ const prevCard = () => {
   color: #777;
   line-height: 1.6;
   text-align: left;
-  margin-left: 0; /* Nessuna indentazione, tutto allineato */
+  margin-left: 0; 
 }
 
 
 .strengths {
-  background-color: #f3dfd1; /* Colore simile all'immagine */
+  background-color: #f3dfd1; 
   padding: 80px 0;
   text-align: center;
 }
@@ -401,7 +391,7 @@ const prevCard = () => {
 }
 
 .footer {
-  background-color: #9C887C; /* Verde scuro */
+  background-color: #9C887C; 
   color: white;
   padding: 60px 0;
   text-align: center;
@@ -461,35 +451,32 @@ const prevCard = () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white; /* Sfondo bianco */
-  color: #3e4f40; /* Testo scuro per contrasto */
+  background-color: white; 
+  color: #3e4f40; 
   font-size: 0.8rem;
   font-weight: bold;
-  border: 2px solid #3e4f40; /* Bordo sottile */
+  border: 2px solid #3e4f40; 
   padding: 12px 20px;
-  border-radius: 30px; /* Bordi arrotondati */
+  border-radius: 30px; 
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Effetto hover */
 .whatsapp-button:hover {
-  background-color: #f9f9f9; /* Leggero grigio */
-  transform: scale(1.05); /* Leggero ingrandimento */
+  background-color: #f9f9f9; 
+  transform: scale(1.05);
 }
 
-/* Effetto click */
 .whatsapp-button:active {
   transform: scale(0.98);
 }
 
-/* Icona */
 .whatsapp-icon {
   width: 20px;
   height: 20px;
   margin-right: 10px;
-  filter: grayscale(100%) contrast(1.2); /* Rende l'icona più elegante */
+  filter: grayscale(100%) contrast(1.2); 
 }
 
 

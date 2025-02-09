@@ -1,16 +1,16 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top w-100 px-5">
     <div class="container-fluid">
-      <!-- Logo a sinistra -->
-      <a class="navbar-brand fw-bold fs-4" href="#">DOTT. Domenico</a>
 
-      <!-- Navbar toggler per mobile -->
+      <a class="navbar-brand fw-bold fs-4" href="#">DOTT. Domenico Silvestri</a>
+
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Voci della navbar centrate -->
+
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav gap-4"> 
           <li class="nav-item">
@@ -42,33 +42,28 @@ body {
   padding-top: 80px; 
 }
 
-/* Navbar */
 .navbar {
   height: 80px;
   justify-content: space-between;
 }
 
-/* Logo */
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
-  white-space: nowrap; /* Impedisce che il testo vada a capo */
+  white-space: nowrap; 
 }
 
-/* Navbar centrata */
 .navbar-nav {
   margin-left: 400px;
   display: flex;
   justify-content: left;
-  flex-grow: 1; /* Fa in modo che il menu occupi lo spazio disponibile */
+  flex-grow: 1; 
 }
 
-/* Spazio uniforme tra le voci */
 .nav-item {
   margin: 0 15px;
 }
 
-/* Stile link */
 .nav-link {
   font-size: 1.2rem;
   font-weight: 500;

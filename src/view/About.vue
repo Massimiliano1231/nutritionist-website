@@ -1,12 +1,12 @@
 <template>
   <div class="about-container">
     <div class="row">
-      <!-- Immagine a sinistra -->
+
       <div class="col-lg-5 image-container">
         <img src="/home_banner.png" alt="Dott. Domenico Silvestri" class="img-fluid rounded">
       </div>
 
-      <!-- Testo a destra -->
+
       <div class="col-lg-5 text-container">
         <h1 class="title">Dott. Domenico Silvestri</h1>
         <h2 class="subtitle">Personal trainer e biologo nutrizionista</h2>
@@ -76,22 +76,22 @@
 }
 
 .image-container img {
-  width: 60%; /* Occupa l'intera larghezza della colonna */
-  height: 500px; /* Mantiene le proporzioni */
+  width: 60%;
+  height: 500px; 
   border-radius: 20px;
   margin-left: 200px;
 }
 
 .text-container {
-  padding-left: 50px; /* Spazio tra immagine e testo */
-  text-align: left; /* Allinea tutto il testo a sinistra */
+  padding-left: 50px; 
+  text-align: left; 
 }
 
 .title {
   font-size: 2.8rem;
   font-weight: bold;
   color: #2d2d2d;
-  text-align: left; /* Forza l'allineamento a sinistra */
+  text-align: left;
 }
 
 .subtitle {
@@ -106,11 +106,11 @@
   font-size: 1.2rem;
   color: #333;
   line-height: 1.6;
-  text-align: left; /* Mantiene l'allineamento a sinistra */
+  text-align: left;
 }
 
 .info-section {
-  background-color: #f9f5f0; /* Stesso colore dello sfondo */
+  background-color: #f9f5f0;
   padding: 80px 0;
   text-align: left;
 }
@@ -176,15 +176,15 @@
 
 .image-container img,
 .image-top-text-bottom img {
-  border-radius: 20px; /* Bordi arrotondati */
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Ombra leggera per effetto rialzato */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Animazione su hover */
+  border-radius: 20px; 
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
 }
 
 .image-container img:hover,
 .image-top-text-bottom img:hover {
-  transform: translateY(-5px); /* Effetto leggero di sollevamento */
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2); /* Ombra più intensa su hover */
+  transform: translateY(-5px); 
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2); 
 }
 
 

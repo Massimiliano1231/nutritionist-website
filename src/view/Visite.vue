@@ -1,6 +1,6 @@
 <template>
   <div class="visit">
-    <!-- Titolo centrato -->
+
     <h1 class="title">SVOLGIMENTO DELLE VISITE</h1>
 
     <div class="container">
@@ -72,7 +72,6 @@ const steps = [
   margin: 0 auto;
 }
 
-/* Stile generale delle sezioni */
 .step {
   display: flex;
   align-items: center;
@@ -80,12 +79,10 @@ const steps = [
   margin-bottom: 60px;
 }
 
-/* Alternanza di layout */
 .step.reverse {
   flex-direction: row-reverse;
 }
 
-/* Stile del testo */
 .text-container {
   flex: 1;
   padding: 20px;
@@ -106,7 +103,6 @@ const steps = [
   text-align: left;
 }
 
-/* Stile dell'immagine */
 .image-container {
   flex: 1;
   display: flex;
