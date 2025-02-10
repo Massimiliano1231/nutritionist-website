@@ -29,7 +29,7 @@
             <router-link class="nav-link fs-5" to="/faq">FAQ</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link fs-5" to="/contatti">Contatti</router-link>
+            <router-link class="nav-link fs-5" to="/contatti">Dove trovarmi</router-link>
           </li>
         </ul>
       </div>
@@ -54,7 +54,7 @@ body {
 }
 
 .navbar-nav {
-  margin-left: 400px;
+  margin-left: 300px;
   display: flex;
   justify-content: left;
   flex-grow: 1; 

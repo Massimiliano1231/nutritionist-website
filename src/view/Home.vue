@@ -102,7 +102,7 @@
                 <div>
               <h3>Whatsapp</h3>
               <a href="https://wa.me/393756836881" target="_blank" class="whatsapp-button">
-                 Scrivici su WhatsApp
+                 Scrivimi su WhatsApp
               </a>  
             </div>
           </div>
