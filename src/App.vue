@@ -16,4 +16,12 @@ import WhatsAppButton from "./components/WhatsAppButton.vue";
 </template>
 
 <style scoped>
+@media (max-width: 768px) {
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+}
 </style>

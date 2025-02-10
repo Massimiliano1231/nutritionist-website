@@ -495,4 +495,117 @@ const prevCard = () => {
 
 
 
+/* Media Query per schermi piccoli (mobile) */
+@media (max-width: 768px) {
+  
+  /* Rimuove margini negativi e imposta il layout fluido */
+  .home {
+    padding-left: -30px;
+    margin-left: -30px;
+    margin-right: 0;
+    width: 100vw;
+    height: auto;
+  }
+
+  /* Banner: Assicura che l'immagine copra l'intera larghezza */
+  .banner {
+    height: auto;
+  }
+
+  .banner img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Sezione "La mia storia" */
+  .story {
+    margin-top: 50px;
+    width: 90%;
+  }
+
+  .story .image-container {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .story img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-right: 0;
+  }
+
+  /* Titoli più piccoli per mobile */
+  .title, .title-p, .title-h, .title-s {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  /* Lista dei benefici: cambia da 3 colonne a 1 */
+  .benefits-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .benefit {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Sezione "Come funziona?" */
+  .how-it-works-content {
+    align-items: center;
+  }
+
+  .step-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .step-description {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  /* Sezione punti di forza - diventa a colonna */
+  .strength-card {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .arrow {
+    font-size: 1.5rem;
+  }
+
+  /* Footer - imposta tutto al centro */
+  .footer {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .whatsapp-button {
+    width: 100%;
+  }
+
+}
+
+
+
   </style>

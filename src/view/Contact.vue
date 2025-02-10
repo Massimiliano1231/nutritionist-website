@@ -20,7 +20,7 @@
         <p class="subtitle"><strong>Studio di xxxxx</strong></p>
         <p class="address">Via Nazionale, 100<br>Pianoro (BO)</p>
 
-        <h3>Orari</h3>
+        <h3 class="orari">Orari</h3>
         <p><strong>Lun - Ven:</strong> 9:00 - 17:00</p>
         <p><strong>Sab:</strong> 9:00 - 12:00</p>
       </div>
@@ -46,7 +46,7 @@
       <div class="contact-item">
         <i class="fa-brands fa-whatsapp"></i>
         <h3>WhatsApp</h3>
-        <a href="https://wa.me/393756836881" target="_blank" class="whatsapp-button">Scrivici su WhatsApp</a>
+        <a href="https://wa.me/393756836881" target="_blank" class="whatsapp-button">Scrivimi su WhatsApp</a>
       </div>
     </div>
     </div>
@@ -130,7 +130,9 @@ const sendEmail = () => {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap');
-
+.orari{
+  padding-bottom: 20px;
+}
 h3 {
   padding-bottom: 60px;
 }
@@ -179,7 +181,7 @@ h2 {
 
 .address {
   font-size: 1.8rem;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 h3 {
@@ -361,4 +363,105 @@ button:hover {
   .btn2:active, .btn2:focus{
     background-color:#FFFFFF;
   }
+
+
+  @media (max-width: 768px) {
+  /* Contenitore principale */
+  .contact-section {
+    margin-left: -30px; /* Rimuove il margine negativo */
+    padding: 20px; /* Riduce il padding per adattarsi meglio */
+  }
+
+  /* Impostazioni della mappa */
+  .location-container {
+    flex-direction: column; /* Imposta la mappa sopra le informazioni */
+    gap: 20px; /* Riduce lo spazio tra gli elementi */
+  }
+
+  .map-container {
+    width: 100%;
+    height: 300px; /* Riduce l'altezza per adattarsi meglio */
+  }
+
+  /* Informazioni */
+  .info-container {
+    width: 100%;
+    text-align: center; /* Centra il testo */
+    padding: 20px;
+  }
+
+  h2, .contatti {
+    font-size: 2.2rem; /* Riduce la dimensione dei titoli */
+  }
+
+  .subtitle, .address, h3, p {
+    font-size: 1.2rem; /* Riduce la dimensione del testo */
+  }
+
+  /* Sezione contatti */
+  .contact-items {
+    flex-direction: column; /* Mostra i contatti in colonna */
+    gap: 30px;
+  }
+
+  .contact-item {
+    text-align: center;
+  }
+
+  /* Bottone WhatsApp */
+  .whatsapp-button {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+
+  /* Form adattato */
+  .contact-container {
+    margin-left: -20px;
+    width: 390px;
+    padding: 20px;
+  }
+
+  form {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  input, textarea {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+
+  .contact-items {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .contact-item {
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .contact-item h3,
+  .contact-item p,
+  .contact-item a {
+    font-size: 1.1rem;
+    padding-bottom: 20px;
+  }
+
+  .contact-item i {
+    font-size: 1.8rem;
+  }
+
+  .whatsapp-button {
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+}
+
 </style>
