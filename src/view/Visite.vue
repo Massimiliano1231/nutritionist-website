@@ -4,12 +4,9 @@
 
     <div class="container">
       <div v-for="(step, index) in steps" :key="index" class="step">
-        <!-- Titolo -->
         <h2 class="step-title">{{ step.title }}</h2>
-        <!-- Paragrafo -->
         <p class="step-description">{{ step.description }}</p>
         
-        <!-- Aggiunta immagine di separazione dopo il primo e il quarto paragrafo -->
         <div v-if="index === 0 || index === 3" class="separator">
           <img :src="step.image" alt="Separatore" class="separator-image">
         </div>
@@ -53,7 +50,7 @@ const steps = [
 .visit {
   margin-left: -350px;
   padding-top: 100px;
-  padding-bottom: 100px; /* Aggiunto spazio in basso */
+  padding-bottom: 100px; 
   width: 100vw;
   background-color: #f9f5f0;
 }
@@ -71,7 +68,6 @@ const steps = [
   margin: 0 auto;
 }
 
-/* Stile per ogni step (titolo + paragrafo) */
 .step {
   margin-bottom: 40px;
 }
@@ -81,17 +77,16 @@ const steps = [
   font-weight: bold;
   color: #3d3d3d;
   margin-bottom: 10px;
-  text-align: left; /* Titoli allineati a sinistra */
+  text-align: left; 
 }
 
 .step-description {
   font-size: 1.2rem;
   color: #555;
   line-height: 1.6;
-  text-align: left; /* Testo allineato a sinistra */
+  text-align: left; 
 }
 
-/* Stile per le immagini separatrici */
 .separator {
   display: flex;
   justify-content: center;
@@ -100,7 +95,7 @@ const steps = [
 
 .separator-image {
   width: 100%;
-  max-width: 900px; /* Aumentato da 700px a 900px */
+  max-width: 900px; 
   border-radius: 15px;
   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
 }
@@ -115,7 +110,7 @@ const steps = [
   }
 
   .title {
-    font-size: 2rem; /* Ridotto per una migliore leggibilità */
+    font-size: 2rem; 
     text-align: center;
     margin-bottom: 30px;
   }
@@ -127,11 +122,11 @@ const steps = [
 
   .step {
     margin-bottom: 30px;
-    text-align: center; /* Centra tutto su mobile */
+    text-align: center; 
   }
 
   .step-title {
-    font-size: 1.6rem; /* Più piccolo per adattarsi meglio */
+    font-size: 1.6rem; 
     text-align: left;
   }
 
@@ -140,14 +135,13 @@ const steps = [
     text-align: left;
   }
 
-  /* Immagine di separazione più piccola */
   .separator {
     margin: 30px 0;
   }
 
   .separator-image {
     width: 90%;
-    max-width: 600px; /* Ridotta su mobile */
+    max-width: 600px; 
   }
 }
 

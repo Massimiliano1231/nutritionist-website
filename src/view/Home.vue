@@ -497,10 +497,8 @@ const prevCard = () => {
 
 
 
-/* Media Query per schermi piccoli (mobile) */
 @media (max-width: 768px) {
   
-  /* Rimuove margini negativi e imposta il layout fluido */
   .home {
     padding-left: -30px;
     margin-left: -30px;
@@ -509,7 +507,6 @@ const prevCard = () => {
     height: auto;
   }
 
-  /* Banner: Assicura che l'immagine copra l'intera larghezza */
   .banner {
     height: auto;
   }
@@ -519,7 +516,6 @@ const prevCard = () => {
     height: 300px;
   }
 
-  /* Sezione "La mia storia" */
   .story {
     margin-top: -40px;
     width: 90%;
@@ -537,13 +533,11 @@ const prevCard = () => {
     margin-right: 0;
   }
 
-  /* Titoli più piccoli per mobile */
   .title, .title-p, .title-h, .title-s {
     font-size: 2rem;
     text-align: center;
   }
 
-  /* Lista dei benefici: cambia da 3 colonne a 1 */
   .benefits-list {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -555,7 +549,6 @@ const prevCard = () => {
     align-items: center;
   }
 
-  /* Sezione "Come funziona?" */
   .how-it-works-content {
     align-items: center;
   }
@@ -570,7 +563,6 @@ const prevCard = () => {
     text-align: center;
   }
 
-  /* Sezione punti di forza - diventa a colonna */
   .strength-card {
     flex-direction: column;
     gap: 20px;
@@ -586,7 +578,6 @@ const prevCard = () => {
     font-size: 1.5rem;
   }
 
-  /* Footer - imposta tutto al centro */
   .footer {
     text-align: center;
     padding: 40px 20px;

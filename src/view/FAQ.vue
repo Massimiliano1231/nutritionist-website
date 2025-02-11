@@ -6,12 +6,10 @@
     </div>
     <div class="faq-container">
       <div v-for="(faq, index) in faqs" :key="index" class="faq-item">
-        <!-- Domanda cliccabile -->
         <button @click="toggleFAQ(index)" class="faq-question">
           {{ faq.question }}
         </button>
 
-        <!-- Risposta con animazione più lenta e spostamento delle domande sotto -->
         <transition name="expand">
           <p v-if="activeIndex === index" class="faq-answer">
             {{ faq.answer }}
@@ -25,15 +23,12 @@
 <script setup>
 import { ref } from "vue";
 
-// Stato attivo per tracciare la domanda aperta
 const activeIndex = ref(null);
 
-// Funzione per alternare l'apertura delle domande
 const toggleFAQ = (index) => {
   activeIndex.value = activeIndex.value === index ? null : index;
 };
 
-// Lista delle domande frequenti con risposte
 const faqs = ref([
   { question: "Lorem ipsum dolor sit amet?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." },
   { question: "Curabitur eleifend nisl nec?", answer: "Curabitur eleifend nisl nec bibendum lobortis. Duis at augue sit amet ipsum viverra vehicula." },
@@ -49,7 +44,6 @@ const faqs = ref([
 </script>
 
 <style scoped>
-/* Stile della sezione FAQ */
 .FAQ {
   margin-left: -350px; 
   padding-top: 50px;
@@ -60,9 +54,8 @@ const faqs = ref([
   align-items: center;
 }
 
-/* Titolo */
 .faq-header {
-  background-color: rgb(214, 197, 174);; /* Verde oliva scuro */
+  background-color: rgb(214, 197, 174);; 
   height: 400px;
   width: 100%;
   padding: 50px 0;
@@ -73,22 +66,19 @@ const faqs = ref([
   align-items: center;
 }
 
-/* Titolo principale */
 .title {
-  font-size: 5.0rem; /* Titolo grande */
+  font-size: 5.0rem; 
   font-weight: bold;
-  color: #1f1f1f; /* Bianco */
+  color: #1f1f1f; 
   margin-bottom: 10px;
 }
 
-/* Sottotitolo */
 .subtitle {
   font-size: 3.5rem;
   font-weight: normal;
   color: #1f1f1f;
 }
 
-/* Contenitore FAQ */
 .faq-container {
   padding-top: 100px;
   width: 60%;
@@ -96,14 +86,12 @@ const faqs = ref([
   text-align: center;
 }
 
-/* Singolo elemento FAQ */
 .faq-item {
   margin-bottom: 15px;
   overflow: hidden;
-  transition: all 2.0s ease-in-out; /* Spostamento fluido */
+  transition: all 2.0s ease-in-out; 
 }
 
-/* Stile per la domanda */
 .faq-question {
   background: none;
   border: none;
@@ -120,7 +108,6 @@ const faqs = ref([
   color: #4d774e;
 }
 
-/* Stile per la risposta */
 .faq-answer {
   font-size: 1.2rem;
   color: #555;
@@ -129,22 +116,19 @@ const faqs = ref([
   padding: 10px 20px;
 }
 
-/* Contenitore della risposta con altezza dinamica */
 .expand-enter-active, .expand-leave-active {
   transition: height 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease-in-out, transform 0.6s ease-in-out;
   overflow: hidden;
 }
 
-/* Stato iniziale: risposta chiusa */
 .expand-enter-from, .expand-leave-to {
   height: 0;
   opacity: 0;
-  transform: translateY(-5px); /* Movimento delicato all'apertura */
+  transform: translateY(-5px); 
 }
 
-/* Stato finale: risposta aperta */
 .expand-enter-to, .expand-leave-from {
-  height: auto; /* Altezza dinamica */
+  height: auto; 
   opacity: 1;
   transform: translateY(0);
 }
@@ -159,43 +143,36 @@ const faqs = ref([
     height: auto;
   }
 
-  /* Riduzione altezza intestazione FAQ */
   .faq-header {
     height: 250px;
     padding: 30px 0;
     margin-top: -40px;
   }
 
-  /* Titolo principale ridotto */
   .title {
     font-size: 3rem;
     margin-bottom: 5px;
   }
 
-  /* Sottotitolo ridotto */
   .subtitle {
     font-size: 2rem;
   }
 
-  /* Contenitore FAQ ottimizzato */
   .faq-container {
     padding-top: 50px;
     width: 90%;
     max-width: 100%;
   }
 
-  /* Elementi della lista FAQ */
   .faq-item {
     margin-bottom: 20px;
   }
 
-  /* Dimensione del testo della domanda */
   .faq-question {
     font-size: 1.3rem;
     text-align: left;
   }
 
-  /* Dimensione del testo della risposta */
   .faq-answer {
     font-size: 1.1rem;
     text-align: left;

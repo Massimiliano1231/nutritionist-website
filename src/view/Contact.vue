@@ -1,7 +1,7 @@
 <template>
   <div class="contact-section">
     <div class="location-container">
-      <!-- Mappa ingrandita -->
+
       <div class="map-container">
         <iframe 
           width="100%" 
@@ -14,7 +14,7 @@
         </iframe>
       </div>
 
-      <!-- Informazioni ingrandite -->
+
       <div class="info-container">
         <h2>Dove trovarmi</h2>
         <p class="subtitle"><strong>Studio di xxxxx</strong></p>
@@ -27,7 +27,6 @@
     </div>
 
 
-    <!-- Sezione contatti -->
     <div class="contact-row">
   <div class="footer-contact">
     <h2 class="contatti">contatti</h2>
@@ -91,23 +90,22 @@ const formData = ref({
 });
 
 const sendEmail = () => {
-  const serviceID = 'service_51clrmn';  // Service ID di EmailJS
-  const templateID = 'template_zginhon'; // Template ID di EmailJS
-  const publicKey = 'pSVLpYLfVTatbP5kC'; // Il tuo Public Key da EmailJS
+  const serviceID = 'service_51clrmn';  
+  const templateID = 'template_zginhon'; 
+  const publicKey = 'pSVLpYLfVTatbP5kC'; 
 
   const templateParams = {
-    from_name: formData.value.name,  // Il nome inserito nel form
-    from_email: formData.value.email,  // L'email inserita nel form
-    message: formData.value.message,  // Il messaggio inserito nel form
-    to_name: "Domenico Silvestri",  // Nome destinatario (può essere fisso)
-    reply_to: formData.value.email,  // Per rispondere direttamente all'utente
+    from_name: formData.value.name, 
+    from_email: formData.value.email,  
+    message: formData.value.message,  
+    to_name: "Domenico Silvestri", 
+    reply_to: formData.value.email,  
   };
 
   emailjs.send(serviceID, templateID, templateParams, publicKey)
     .then(response => {
       console.log('✅ Email inviata con successo!', response.status, response.text);
       alert('Email inviata con successo!');
-      // Reset del form dopo l'invio
       formData.value = { name: "", email: "", message: "" };
     })
     .catch(error => {
@@ -133,27 +131,24 @@ h3 {
   margin-top: 100px;
   margin-left: -350px; 
   padding-top: 50px;
-  width: 100vw; /* Occupa tutta la larghezza disponibile */
+  width: 100vw; 
 }
 
-/* Contenitore principale - più largo */
 .location-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 100px; /* Maggiore spazio tra mappa e testo */
-  max-width: 1400px; /* Più grande rispetto a prima */
+  gap: 100px; 
+  max-width: 1400px; 
   margin: 0 auto;
 }
 
-/* Contenitore informazioni ingrandito */
 .info-container {
   padding: 50px;
   width: 50%;
   text-align: left;
 }
 
-/* Stili per testi più grandi */
 h2 {
   font-size: 3.5rem;
   font-weight: bold;
@@ -186,16 +181,15 @@ p {
   color: #444;
 }
 
-/* Mappa più grande */
 .map-container {
   width: 60%;
-  height: 500px; /* Altezza aumentata */
+  height: 500px; 
   border-radius: 12px;
   overflow: hidden;
 }
 .footer-contact {
   margin-top: 100px;
-  background-color: #f8f1e7; /* Colore simile a quello della pagina */
+  background-color: #f8f1e7;
   padding: 50px 0;
   text-align: center;
 }
@@ -203,7 +197,7 @@ p {
 .contact-items {
   display: flex;
   justify-content: center;
-  gap: 80px; /* Maggiore distanza tra gli elementi */
+  gap: 80px; 
 }
 
 .contact-item {
@@ -227,7 +221,6 @@ p {
   color: #444;
 }
 
-/* Stile bottone WhatsApp */
 .whatsapp-button {
   display: flex;
   align-items: center;
@@ -327,8 +320,8 @@ button:hover {
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  margin: 100px auto 0 auto; /* Allinea al centro con margine sopra */
-  gap: 50px; /* Spazio tra le sezioni */
+  margin: 100px auto 0 auto; 
+  gap: 50px; 
 }
 
 .footer-contact {
@@ -387,42 +380,38 @@ button:hover {
 
 
   @media (max-width: 768px) {
-  /* Contenitore principale */
   .contact-section {
     background-color: #f8f1e7;
-    margin-left: -30px; /* Rimuove il margine negativo */
-    padding: 20px; /* Riduce il padding per adattarsi meglio */
+    margin-left: -30px; 
+    padding: 20px; 
   }
 
-  /* Impostazioni della mappa */
   .location-container {
-    flex-direction: column; /* Imposta la mappa sopra le informazioni */
-    gap: 20px; /* Riduce lo spazio tra gli elementi */
+    flex-direction: column; 
+    gap: 20px; 
   }
 
   .map-container {
     width: 100%;
-    height: 300px; /* Riduce l'altezza per adattarsi meglio */
+    height: 300px;
   }
 
-  /* Informazioni */
   .info-container {
     width: 100%;
-    text-align: center; /* Centra il testo */
+    text-align: center;
     padding: 20px;
   }
 
   h2, .contatti {
-    font-size: 2.2rem; /* Riduce la dimensione dei titoli */
+    font-size: 2.2rem; 
   }
 
   .subtitle, .address, h3, p {
-    font-size: 1.2rem; /* Riduce la dimensione del testo */
+    font-size: 1.2rem; 
   }
 
-  /* Sezione contatti */
   .contact-items {
-    flex-direction: column; /* Mostra i contatti in colonna */
+    flex-direction: column; 
     gap: 30px;
   }
 
@@ -430,13 +419,11 @@ button:hover {
     text-align: center;
   }
 
-  /* Bottone WhatsApp */
   .whatsapp-button {
     font-size: 1rem;
     padding: 10px 15px;
   }
 
-  /* Form adattato */
   .contact-container {
     margin-left: -20px;
     width: 390px;
@@ -486,14 +473,14 @@ button:hover {
   }
 
   .contact-row {
-    flex-direction: column; /* Dispone gli elementi uno sotto l'altro */
-    gap: 30px; /* Spazio tra le sezioni */
-    align-items: center; /* Centra gli elementi */
+    flex-direction: column; 
+    gap: 30px; 
+    align-items: center; 
     margin-top: -50px;
   }
 
   .contact-container {
-    width: 350px; /* Occupa tutta la larghezza disponibile */
+    width: 350px; 
     margin-left: 15px;
       }
 

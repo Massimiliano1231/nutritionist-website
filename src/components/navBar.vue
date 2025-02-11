@@ -45,12 +45,10 @@ import { ref } from "vue";
 
 const isOpen = ref(false);
 
-// Funzione per alternare apertura/chiusura della navbar
 const toggleNavbar = () => {
   isOpen.value = !isOpen.value;
 };
 
-// Funzione per chiudere la navbar quando si clicca su un link
 const closeNavbar = () => {
   isOpen.value = false;
 };
@@ -99,24 +97,24 @@ body {
 
 @media (max-width: 768px) {
   .navbar {
-    height: 50px; /* Ridotta l'altezza */
-    padding: 5px 15px; /* Ridotto il padding */
+    height: 50px; 
+    padding: 5px 15px; 
     display: flex;
-    justify-content: center; /* Assicura che il titolo e il bottone siano allineati */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center; 
+    align-items: center; 
   }
 
   .navbar-brand {
-    font-size: 0.8rem; /* Ridotto rispetto a prima */
-    white-space: nowrap; /* Evita che vada su due righe */
-    flex-grow: 1; /* Occupa lo spazio disponibile */
-    text-align: left; /* Allineato a sinistra */
+    font-size: 0.8rem; 
+    white-space: nowrap; 
+    flex-grow: 1; 
+    text-align: left; 
   }
 
   .navbar-toggler {
-    font-size: 1.2rem; /* Ridotta la grandezza */
-    padding: 5px 8px; /* Ridotto il padding */
-    border: none; /* Rimosso il bordo */
+    font-size: 1.2rem; 
+    padding: 5px 8px; 
+    border: none; 
   }
 
   .navbar-collapse {
@@ -139,19 +137,19 @@ body {
     display: block; 
     padding: 15px 20px;
     color: white !important;
-    font-size: 1.2rem; /* Regolato per evitare che sia troppo grande */
-    padding: 10px 0; /* Spazio uniforme tra i link */
+    font-size: 1.2rem; 
+    padding: 10px 0; 
     width: 100%;
-    text-align: left; /* Allinea tutto a sinistra */
+    text-align: left; 
     margin-left: -280px;
-    white-space: nowrap; /* Evita il capo automatico */
+    white-space: nowrap; 
   }
 
   .nav-item {
-    width: 100%; /* Fa sì che ogni voce di menu occupi l'intera larghezza */
+    width: 100%;
   }
   .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Evidenzia la riga al passaggio del mouse */
+    background-color: rgba(255, 255, 255, 0.2); 
   }
 }
 
