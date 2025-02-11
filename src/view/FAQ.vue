@@ -149,4 +149,58 @@ const faqs = ref([
   transform: translateY(0);
 }
 
+
+@media (max-width: 768px) {
+  .FAQ {
+    padding-left: -30px;
+    margin-left: -30px;
+    margin-right: 0;    
+    width: 100vw;
+    height: auto;
+  }
+
+  /* Riduzione altezza intestazione FAQ */
+  .faq-header {
+    height: 250px;
+    padding: 30px 0;
+    margin-top: -40px;
+  }
+
+  /* Titolo principale ridotto */
+  .title {
+    font-size: 3rem;
+    margin-bottom: 5px;
+  }
+
+  /* Sottotitolo ridotto */
+  .subtitle {
+    font-size: 2rem;
+  }
+
+  /* Contenitore FAQ ottimizzato */
+  .faq-container {
+    padding-top: 50px;
+    width: 90%;
+    max-width: 100%;
+  }
+
+  /* Elementi della lista FAQ */
+  .faq-item {
+    margin-bottom: 20px;
+  }
+
+  /* Dimensione del testo della domanda */
+  .faq-question {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  /* Dimensione del testo della risposta */
+  .faq-answer {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+}
+
+
 </style>

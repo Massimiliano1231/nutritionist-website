@@ -105,5 +105,52 @@ const steps = [
   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 768px) {
+  .visit {
+    padding-left: -30px;
+    margin-left: -30px;
+    margin-right: 0;    
+    width: 100vw;
+    height: auto;
+  }
+
+  .title {
+    font-size: 2rem; /* Ridotto per una migliore leggibilità */
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .step {
+    margin-bottom: 30px;
+    text-align: center; /* Centra tutto su mobile */
+  }
+
+  .step-title {
+    font-size: 1.6rem; /* Più piccolo per adattarsi meglio */
+    text-align: left;
+  }
+
+  .step-description {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+
+  /* Immagine di separazione più piccola */
+  .separator {
+    margin: 30px 0;
+  }
+
+  .separator-image {
+    width: 90%;
+    max-width: 600px; /* Ridotta su mobile */
+  }
+}
+
+
 
 </style>

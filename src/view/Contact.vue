@@ -25,65 +25,57 @@
         <p><strong>Sab:</strong> 9:00 - 12:00</p>
       </div>
     </div>
-    <div class="footer-contact">
-      <h2 class="contatti">contatti</h2>
+
+
+    <!-- Sezione contatti -->
+    <div class="contact-row">
+  <div class="footer-contact">
+    <h2 class="contatti">contatti</h2>
     <div class="contact-items">
-      <!-- Email -->
       <div class="contact-item">
         <i class="fa-solid fa-envelope"></i>
         <h3>Email</h3>
         <p>domenicosilvestri.1995@gmail.com</p>
       </div>
-
-      <!-- Telefono -->
       <div class="contact-item">
         <i class="fa-solid fa-phone"></i>
         <h3>Telefono</h3>
         <p>(+39) 375 683 6881</p>
       </div>
-
-      <!-- WhatsApp -->
       <div class="contact-item">
         <i class="fa-brands fa-whatsapp"></i>
         <h3>WhatsApp</h3>
         <a href="https://wa.me/393756836881" target="_blank" class="whatsapp-button">Scrivimi su WhatsApp</a>
       </div>
     </div>
-    </div>
+  </div>
 
-    <div class="contact-container">
+  <div class="contact-container">
     <form @submit.prevent="sendEmail">
-         <h3>scrivimi</h3>
-      <!-- Nome e Cognome -->
+      <h3>scrivimi</h3>
       <div class="field" tabindex="1">
         <label for="username">
           <i class="far fa-user"></i> Nome e Cognome
         </label>
         <input v-model="formData.name" name="username" type="text" placeholder="Es. Mario Rossi" required>
       </div>
-
-      <!-- Email -->
       <div class="field" tabindex="2">
         <label for="email">
           <i class="far fa-envelope"></i> Email
         </label>
         <input v-model="formData.email" name="email" type="email" placeholder="email@domain.com" required>
       </div>
-
-      <!-- Messaggio -->
       <div class="field" tabindex="3">
         <label for="message">
           <i class="far fa-edit"></i> Messaggio
         </label>
         <textarea v-model="formData.message" name="message" placeholder="Scrivi il tuo messaggio..." required></textarea>
       </div>
-
-      <!-- Bottone di invio -->
       <button class="btn2" type="submit">Invia Messaggio</button>
-
-
     </form>
-    </div>
+  </div>
+</div>
+
   </div>
 </template>
 
@@ -329,6 +321,35 @@ button:hover {
   background: #1e3799;
 }
 
+.contact-row {
+  display: flex;
+  background-color: #f8f1e7;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin: 100px auto 0 auto; /* Allinea al centro con margine sopra */
+  gap: 50px; /* Spazio tra le sezioni */
+}
+
+.footer-contact {
+  margin-left: 100px;
+  flex: 1;
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  height: 500px;
+}
+
+.contact-container {
+  margin-left: -200px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  padding-top:280px;
+}
+
 
 
 @media (max-width: 425px) {
@@ -368,6 +389,7 @@ button:hover {
   @media (max-width: 768px) {
   /* Contenitore principale */
   .contact-section {
+    background-color: #f8f1e7;
     margin-left: -30px; /* Rimuove il margine negativo */
     padding: 20px; /* Riduce il padding per adattarsi meglio */
   }
@@ -461,6 +483,30 @@ button:hover {
   .whatsapp-button {
     font-size: 1rem;
     padding: 6px 10px;
+  }
+
+  .contact-row {
+    flex-direction: column; /* Dispone gli elementi uno sotto l'altro */
+    gap: 30px; /* Spazio tra le sezioni */
+    align-items: center; /* Centra gli elementi */
+    margin-top: -50px;
+  }
+
+  .contact-container {
+    width: 350px; /* Occupa tutta la larghezza disponibile */
+    margin-left: 15px;
+      }
+
+  .footer-contact {
+    width: 90%;
+    margin-left: 10px;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .contact-container {
+    display: flex;
+    justify-content: center;
   }
 }
 

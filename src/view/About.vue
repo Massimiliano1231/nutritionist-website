@@ -188,4 +188,96 @@
 }
 
 
+@media (max-width: 768px) {
+  .about-container {
+    padding-left: -30px;
+    margin-left: -30px;
+    margin-right: 0;    
+    width: 100vw;
+    height: auto;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .image-container {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .image-container img {
+    margin-top: -40px;
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .text-container {
+    padding: 0 15px;
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    text-align: left;
+    margin-left: 10px;
+  }
+
+  .subtitle {
+    padding-top: 20px;
+    font-size: 1.2rem;
+    text-align: left;
+    margin-left: 10px;
+  }
+
+  .text-container p {
+    font-size: 1.1rem;
+    text-align: left;
+    margin-left: 10px;
+  }
+
+  .info-section {
+    padding: 60px 20px;
+  }
+
+  .info-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .info-content h3 {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .info-content p {
+    padding-top: 20px;
+    font-size: 1.1rem;
+    text-align: left;
+  }
+
+  .image-top-text-bottom {
+    padding: 50px 20px;
+  }
+
+  .image-top-text-bottom img {
+    width: 90%;
+  }
+
+  .text-content {
+    padding-top: 40px;
+    text-align: center;
+  }
+
+  .text-content p {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+}
+
+
 </style>

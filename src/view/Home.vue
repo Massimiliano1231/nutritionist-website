@@ -423,9 +423,11 @@ const prevCard = () => {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .footer-description {
+  text-align: left;
   max-width: 600px;
   margin-bottom: 30px;
 }
@@ -514,12 +516,12 @@ const prevCard = () => {
 
   .banner img {
     width: 100%;
-    height: auto;
+    height: 300px;
   }
 
   /* Sezione "La mia storia" */
   .story {
-    margin-top: 50px;
+    margin-top: -40px;
     width: 90%;
   }
 
