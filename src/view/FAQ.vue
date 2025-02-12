@@ -45,10 +45,11 @@ const faqs = ref([
 
 <style scoped>
 .FAQ {
-  margin-left: -350px; 
-  padding-top: 50px;
-  width: 100vw;
-  background-color: #ece2d0;
+  padding-top: 3%;
+  padding-bottom: 100px; 
+  width: 100%;
+  height: 100%;
+  background-color: #f9f5f0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,11 +137,9 @@ const faqs = ref([
 
 @media (max-width: 768px) {
   .FAQ {
-    padding-left: -30px;
-    margin-left: -30px;
-    margin-right: 0;    
-    width: 100vw;
-    height: auto;
+    padding-top: 25%;
+    width: 100%;
+    height: 100%;
   }
 
   .faq-header {

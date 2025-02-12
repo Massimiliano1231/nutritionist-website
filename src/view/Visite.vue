@@ -47,20 +47,21 @@ const steps = [
 
 
 <style scoped>
+
 .visit {
-  margin-left: -350px;
-  padding-top: 100px;
-  padding-bottom: 100px; 
-  width: 100vw;
+  margin-top: 2%;
+  width: 100%;
+  height: 100%;
   background-color: #f9f5f0;
 }
 
 .title {
+  padding-top: 7%;
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
   color: #2d2d2d;
-  margin-bottom: 50px;
+  padding-bottom: 2%;
 }
 
 .container {
@@ -101,12 +102,10 @@ const steps = [
 }
 
 @media (max-width: 768px) {
-  .visit {
-    padding-left: -30px;
-    margin-left: -30px;
-    margin-right: 0;    
-    width: 100vw;
-    height: auto;
+  .visit {   
+    padding-top: 10%;
+    width: 100%;
+    height: 100%;
   }
 
   .title {

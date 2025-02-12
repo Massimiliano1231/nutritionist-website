@@ -20,7 +20,7 @@ import WhatsAppButton from "./components/WhatsAppButton.vue";
 
 html, body {
     overflow-x: hidden;
-    max-width: 100%;
+    width: 100vw;
 }
 
 }

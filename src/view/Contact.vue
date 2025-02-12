@@ -128,18 +128,19 @@ h3 {
 }
 
 .contact-section {
-  margin-top: 100px;
-  margin-left: -350px; 
-  padding-top: 50px;
-  width: 100vw; 
+  padding-top: 7%;
+  padding-bottom: 10%; 
+  width: 100%;
+  height: 100%;
+  background-color: #f9f5f0;
 }
 
 .location-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 100px; 
-  max-width: 1400px; 
+  width: 100%; 
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -182,13 +183,13 @@ p {
 }
 
 .map-container {
-  width: 60%;
-  height: 500px; 
+  height: 50vh;
+  width: 40%;
   border-radius: 12px;
   overflow: hidden;
 }
 .footer-contact {
-  margin-top: 100px;
+  margin-top: 2%;
   background-color: #f8f1e7;
   padding: 50px 0;
   text-align: center;
@@ -316,33 +317,26 @@ button:hover {
 
 .contact-row {
   display: flex;
-  background-color: #f8f1e7;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: left;
   width: 100%;
-  margin: 100px auto 0 auto; 
-  gap: 50px; 
+  padding-top: 7%;
 }
 
-.footer-contact {
-  margin-left: 100px;
-  flex: 1;
+.footer-contact{
+  margin-left: 10%;
+}
+.contact-container {
+  margin-right: 10%;
+}
+
+
+.footer-contact, .contact-container {
+  flex: 100; 
   padding: 40px;
   text-align: center;
   border-radius: 10px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  height: 500px;
+  height: auto;
 }
-
-.contact-container {
-  margin-left: -200px;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  height: 400px;
-  padding-top:280px;
-}
-
 
 
 @media (max-width: 425px) {
@@ -382,8 +376,9 @@ button:hover {
   @media (max-width: 768px) {
   .contact-section {
     background-color: #f8f1e7;
-    margin-left: -30px; 
-    padding: 20px; 
+    padding-top: 20%;
+    height: 100%;
+    width: 100%;
   }
 
   .location-container {
@@ -393,7 +388,7 @@ button:hover {
 
   .map-container {
     width: 100%;
-    height: 300px;
+    height: 70%;
   }
 
   .info-container {

@@ -56,11 +56,9 @@
 </template>
 <style scoped>
 .about-container {
-    padding-top: 100px;
-    padding-left: -200px;
-    margin-left: -350px;
-    width: 100vw;
-    height: 100vw;
+  padding-top: 7%;
+    width: 100%;
+    height: 100%;
     margin-right: -300px;
     background-color: #f9f5f0;
 }
@@ -76,10 +74,10 @@
 }
 
 .image-container img {
-  width: 60%;
-  height: 500px; 
+  width: 100%;
+  height: 100%; 
   border-radius: 20px;
-  margin-left: 200px;
+  margin-left: 5%;
 }
 
 .text-container {
@@ -190,11 +188,9 @@
 
 @media (max-width: 768px) {
   .about-container {
-    padding-left: -30px;
-    margin-left: -30px;
-    margin-right: 0;    
-    width: 100vw;
-    height: auto;
+    padding-top: 25%;
+    width: 100%;
+    height: 100%;
   }
 
   .row {
@@ -265,7 +261,7 @@
   }
 
   .image-top-text-bottom img {
-    width: 90%;
+    width: 100%;
   }
 
   .text-content {

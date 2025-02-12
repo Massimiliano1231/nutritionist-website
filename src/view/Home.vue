@@ -6,27 +6,29 @@
       </div>
   
       <section class="story container py-5">
-        <div class="row align-items-center">
+  <div class="row">
+    <!-- Colonna per il testo -->
+    <div class="col-lg-7 col-md-7">
+      <h2 class="title">La mia storia</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum vitae modi quo...
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolores quaerat, minus reiciendis maxime obcaecati perferendis neque rerum quam, aut expedita. Reiciendis dignissimos eos veritatis dolor voluptate, non optio nihil?
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum labore saepe...
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia voluptatem a debitis facere minus nesciunt corporis facilis! Dolores consectetur, obcaecati iure illum ut atque repellat, aut qui placeat dignissimos facere?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, maxime! Suscipit...
+      </p>
+    </div>
 
-          <div class="col-lg-7">
-            <h2 class="title">La mia storia</h2>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum vitae modi quo, doloremque natus dolorum quis, sed aperiam ab libero obcaecati nemo laboriosam possimus praesentium distinctio beatae eos, ea eius!
-            </p>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum labore saepe corrupti nostrum maiores aliquid porro voluptates deserunt fugit consequuntur dolorem fugiat, ipsa animi, delectus recusandae tenetur. Quidem, magnam fugiat.
-            </p>
-            <p>
-             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, maxime! Suscipit, dolorum expedita cumque qui minus facere praesentium fuga quisquam animi modi repellat culpa. Sequi recusandae autem voluptatem enim ut.
-            </p>
-
-          </div>
-  
-          <div class="col-lg-5 image-container">
-  <img src="/home_banner.png" alt="Nutrizionista" class="img-fluid rounded">
-</div>
-        </div>
-      </section>
+    <!-- Colonna per l'immagine -->
+    <div class="col-lg-5 col-md-5 d-flex justify-content-center align-items-center">
+      <img src="/home_banner.png" alt="Nutrizionista" class="img-fluid rounded story-img">
+    </div>
+  </div>
+</section>
 
       <section class="benefits">
     <div class="container">
@@ -168,12 +170,11 @@ const prevCard = () => {
   <style scoped>
 
   .home {    
-    padding-left: -200px;
-    margin-left: -350px;
-    width: 100vw;
-    height: 100vw;
-    margin-right: -300px;
-    background-color: #f9f5f0;
+    padding-top: 3%;
+  padding-bottom: 100px; 
+  width: 100vw;
+  height: 100vw;
+  background-color: #f9f5f0;
   }
     .banner {
         margin-top: 50px;
@@ -184,43 +185,35 @@ const prevCard = () => {
     height: 100%;
     display: block;
   }
+  
   .story {
-  margin-top: 100px; 
-  max-width: 1200px;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+
 }
 
-
 .title {
-    margin-bottom: 50px;
-    margin-top:50px; 
+  margin-bottom: 50px;
+  margin-top: 50px; 
   font-size: 2.5rem;
   font-weight: bold;
   color: #2d2d2d;
   text-align: left;
 }
+
 .story p {
-    margin-bottom: 1rem; 
+  margin-bottom: 1rem;
   text-align: left;
-  margin-left: 0px; 
   font-family: 'Georgia', serif;
   font-size: 1.2rem;
 }
 
-.story .image-container {
-  display: flex;
-  justify-content: flex-end; 
-  align-items: center; 
-  height: 100%; 
+.story-img {
+  max-width: 120%;
+  margin-left: 50%;
+  height: 90%;
+  border-radius: 10px;
 }
 
-.story img {
-  margin-right: -250px;
-  max-width: 150%; 
-  height: 500px;
-}
   
   .btn-success {
     background-color: #4d774e;
@@ -500,11 +493,8 @@ const prevCard = () => {
 @media (max-width: 768px) {
   
   .home {
-    padding-left: -30px;
-    margin-left: -30px;
-    margin-right: 0;
-    width: 100vw;
-    height: auto;
+    width: 100%;
+    height: 100%;
   }
 
   .banner {
@@ -513,7 +503,7 @@ const prevCard = () => {
 
   .banner img {
     width: 100%;
-    height: 300px;
+    height: 100%;
   }
 
   .story {
@@ -531,6 +521,7 @@ const prevCard = () => {
     max-width: 100%;
     height: auto;
     margin-right: 0;
+    margin-left: 0;
   }
 
   .title, .title-p, .title-h, .title-s {

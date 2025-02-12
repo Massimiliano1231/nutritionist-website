@@ -57,12 +57,10 @@ const closeNavbar = () => {
 
 
 <style scoped>
-body {
-  padding-top: 80px; 
-}
+
 
 .navbar {
-  height: 80px;
+  height: 10%;
   justify-content: space-between;
 }
 
@@ -73,9 +71,9 @@ body {
 }
 
 .navbar-nav {
-  margin-left: 300px;
+  margin-left: -10%;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   flex-grow: 1; 
 }
 
@@ -135,13 +133,13 @@ body {
 
   .nav-link {
     display: block; 
+    margin-left: 15%;
     padding: 15px 20px;
     color: white !important;
     font-size: 1.2rem; 
     padding: 10px 0; 
     width: 100%;
     text-align: left; 
-    margin-left: -280px;
     white-space: nowrap; 
   }
 
