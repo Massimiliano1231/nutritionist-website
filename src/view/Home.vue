@@ -2,29 +2,33 @@
     <div class="home">
 
       <div class="banner">
-        <img src="/home_banner.png" alt="Team di nutrizionisti" class="full-width">
+        <img src="/imgHomeAlta12.jpg" alt="Team di nutrizionisti" class="full-width">
       </div>
   
-      <section class="story container py-5">
-  <div class="row">
+      <section class="story">
+  <div class="row1">
     <!-- Colonna per il testo -->
-    <div class="col-lg-7 col-md-7">
+    <div class="coll">
       <h2 class="title">La mia storia</h2>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum vitae modi quo...
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolores quaerat, minus reiciendis maxime obcaecati perferendis neque rerum quam, aut expedita. Reiciendis dignissimos eos veritatis dolor voluptate, non optio nihil?
+        Sono il Dott. Domenico Silvestri, biologo nutrizionista e chinesiologo. Dopo la laurea in Scienze delle Attività Motorie e Sportive a Bologna, ho scelto di approfondire il legame tra nutrizione e benessere con una magistrale in Biologia della Salute, curriculum nutrizionale.
       </p>
       <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum labore saepe...
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia voluptatem a debitis facere minus nesciunt corporis facilis! Dolores consectetur, obcaecati iure illum ut atque repellat, aut qui placeat dignissimos facere?
+        Dopo aver superato l'esame di Stato da biologo, ho arricchito la mia formazione sotto la guida della Dott.ssa Francesca Gamberini, affinando competenze ed esperienza.
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, maxime! Suscipit...
+        Oggi lavoro come biologo nutrizionista a Bologna e provincia, occupandomi di nutrizione sportiva e di piani alimentari personalizzati per persone in condizioni fisiologiche e patologiche.
+      </p>
+      <p>
+        Il mio approccio si basa sull’educare i pazienti a un’alimentazione consapevole, equilibrata e sostenibile, lasciando spazio ai momenti di convivialità che la vita ci offre. Il mio obiettivo è creare piani nutrizionali su misura, adattandoli allo stile di vita di ogni paziente e aiutandolo a sviluppare un rapporto sano con il cibo.
+      </p>
+      <p>
+        Se vuoi migliorare il tuo rapporto con il cibo e imparare a nutrirti in modo consapevole senza rinunce, contattami e prenota subito un appuntamento!
       </p>
     </div>
 
     <!-- Colonna per l'immagine -->
-    <div class="col-lg-5 col-md-5 d-flex justify-content-center align-items-center">
+    <div class="colll">
       <img src="/home_banner.png" alt="Nutrizionista" class="img-fluid rounded story-img">
     </div>
   </div>
@@ -144,12 +148,12 @@ const prevCard = () => {
 
 
   const benefits = [
-    { bold: "Ti aiuta", text: "a capire quali sono gli errori alimentari più frequenti." },
-    { bold: "Ti guida", text: "nella scelta di una adeguata e corretta alimentazione." },
-    { bold: "Migliora", text: "il tuo stato di salute attraverso un nuovo regime alimentare." },
-    { bold: "Crea", text: "un percorso di educazione alimentare personalizzato." },
-    { bold: "Ti sostiene", text: "psicologicamente per ottenere i risultati sperati." },
-    { bold: "Ti supporta", text: "durante il regime dietetico e il suo mantenimento." }
+    { bold: "Migliora", text: "il tuo stato di salute con strumenti di analisi obbiettivi." },
+    { bold: "Sostiene", text: "la tua massa magra con un approccio nutrizionale personalizzato." },
+    { bold: "Ti aiuta", text: "a dimagrire attraverso un rapporto sano con il cibo." },
+    { bold: "Ti insegna", text: "a fare scelte consapevoli per adottare uno stile di vita sano e attivo." },
+    { bold: "Ti supporta", text: "nei momenti di difficoltà adattando il piano nutrizionale alle tue esigenze di vita." },
+    { bold: "Ti guida"   , text: "durante il periodo di mantenimento per consolidare i risultati raggiunti." }
   ];
 
 
@@ -177,18 +181,36 @@ const prevCard = () => {
   background-color: #f9f5f0;
   }
     .banner {
-        margin-top: 50px;
-        height: 40%;
+       margin-top: 50px;
+       height: 60%;
+       background-color: #ece2d0;
     }
+    
   .banner img {
-    width: 100%;
-    height: 100%;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; 
+    height: 80%;
+  object-fit: cover; 
   }
   
-  .story {
-  width: 100%;
+.story {
+  margin-top: -10%;
+  background-color: #ece2d0; 
+  padding: 60px 20px;
+  border-radius: 10px;
+  padding-left: 17%;
+}
 
+.row1 {
+  display: flex;
+  width: 100%;
+}
+
+.coll, .colll {
+  flex: 1;
+  padding: 20px;
 }
 
 .title {
@@ -208,9 +230,10 @@ const prevCard = () => {
 }
 
 .story-img {
-  max-width: 120%;
-  margin-left: 50%;
-  height: 90%;
+  padding-top: 10%;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
 }
 
@@ -230,6 +253,7 @@ const prevCard = () => {
   background-color: #ece2d0; 
   padding: 60px 20px;
   border-radius: 10px;
+  padding-right: 15%;
 }
 
 .title-p {
@@ -275,6 +299,7 @@ const prevCard = () => {
 .how-it-works {
   background-color: #f9f5f0;
   padding: 80px 0;
+  padding-right: 15%;
 }
 
 .container {
@@ -490,58 +515,114 @@ const prevCard = () => {
 
 
 
-@media (max-width: 768px) {
-  
-  .home {
-    width: 100%;
-    height: 100%;
-  }
+@media (max-width: 1024px) { 
 
-  .banner {
-    height: auto;
-  }
 
+  /* Adattamento per tablet */
+  .story {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
   .banner img {
     width: 100%;
-    height: 100%;
-  }
-
-  .story {
-    margin-top: -40px;
-    width: 90%;
-  }
-
-  .story .image-container {
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  .story img {
-    width: 100%;
-    max-width: 100%;
     height: auto;
-    margin-right: 0;
-    margin-left: 0;
+  }
+
+  .row1 {
+    flex-direction: column;
+  }
+
+  .coll, .colll {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .colll img {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
   }
 
   .title, .title-p, .title-h, .title-s {
-    font-size: 2rem;
     text-align: center;
+  }
+}
+
+
+@media (max-width: 768px) { 
+
+  .home {
+    height: 100%;
+    width: 100%;
+  }
+  /* Adattamento per smartphone */
+  .story {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .banner img {
+    width: 100%;
+    height: auto;
+  }
+
+  .row1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .coll {
+    width: 90%;
+  }
+
+  .colll {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .colll img {
+    width: 100%;
+    max-width: 90%;
+    height: auto;
   }
 
   .benefits-list {
     grid-template-columns: 1fr;
-    gap: 20px;
+    padding: 0;
   }
 
-  .benefit {
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
+  .benefits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.benefits .container {
+  max-width: 900px; 
+  width: 100%;
+  padding: 0 0px;
+}
+
+.how-it-works {
+    text-align: left;
+  }
+
+  .how-it-works .container {
+    max-width: 100%; /* Permette al contenuto di adattarsi meglio su mobile */
+    padding: 0 15px; /* Evita che il testo tocchi i bordi dello schermo */
   }
 
   .how-it-works-content {
-    align-items: center;
+    align-items: flex-start; 
+  }
+
+  .step-title, .step-description {
+    text-align: left !important; 
   }
 
   .step-title {
@@ -560,7 +641,7 @@ const prevCard = () => {
   }
 
   .card {
-    width: 100%;
+    width: 90%;
     max-width: 90%;
     padding: 20px;
   }
@@ -587,8 +668,47 @@ const prevCard = () => {
   .whatsapp-button {
     width: 100%;
   }
-
 }
+
+
+@media (max-width: 480px) { 
+  /* Adattamento per schermi molto piccoli */
+  .title, .title-p, .title-h, .title-s {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .story p {
+    font-size: 1rem;
+  }
+
+  .colll img {
+    max-width: 100%;
+    height: auto;
+  }
+  .banner img {
+    width: 100%;
+    height: auto;
+  }
+
+  .benefits-list {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .strength-card {
+    flex-direction: column;
+  }
+
+  .how-it-works-content {
+    padding: 0 10px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+  }
+}
+
 
 
 
