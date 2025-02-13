@@ -10,21 +10,22 @@
     <!-- Colonna per il testo -->
     <div class="coll">
       <h2 class="title">La mia storia</h2>
-      <p>
-        Sono il Dott. Domenico Silvestri, biologo nutrizionista e chinesiologo. Dopo la laurea in Scienze delle Attività Motorie e Sportive a Bologna, ho scelto di approfondire il legame tra nutrizione e benessere con una magistrale in Biologia della Salute, curriculum nutrizionale.
-      </p>
-      <p>
-        Dopo aver superato l'esame di Stato da biologo, ho arricchito la mia formazione sotto la guida della Dott.ssa Francesca Gamberini, affinando competenze ed esperienza.
-      </p>
-      <p>
-        Oggi lavoro come biologo nutrizionista a Bologna e provincia, occupandomi di nutrizione sportiva e di piani alimentari personalizzati per persone in condizioni fisiologiche e patologiche.
-      </p>
-      <p>
-        Il mio approccio si basa sull’educare i pazienti a un’alimentazione consapevole, equilibrata e sostenibile, lasciando spazio ai momenti di convivialità che la vita ci offre. Il mio obiettivo è creare piani nutrizionali su misura, adattandoli allo stile di vita di ogni paziente e aiutandolo a sviluppare un rapporto sano con il cibo.
-      </p>
-      <p>
-        Se vuoi migliorare il tuo rapporto con il cibo e imparare a nutrirti in modo consapevole senza rinunce, contattami e prenota subito un appuntamento!
-      </p>
+<p>
+  Sono il <strong>Dott. Domenico Silvestri</strong>, <strong>biologo nutrizionista e chinesiologo</strong>. Dopo la laurea in <strong>Scienze delle Attività Motorie e Sportive</strong> a Bologna, ho scelto di approfondire il legame tra nutrizione e benessere con una magistrale in <strong>Biologia della Salute, curriculum nutrizionale</strong>.
+</p>
+<p>
+  Dopo aver superato l'esame di Stato da biologo, ho arricchito la mia formazione sotto la guida della <strong>Dott.ssa Francesca Gamberini</strong>, affinando competenze ed esperienza.
+</p>
+<p>
+  Oggi lavoro come <strong>biologo nutrizionista</strong> a Bologna e provincia, occupandomi di <strong>nutrizione sportiva</strong> e di <strong>piani alimentari personalizzati</strong> per persone in condizioni fisiologiche e patologiche.
+</p>
+<p>
+  Il mio approccio si basa sull’educare i pazienti a <strong>un’alimentazione consapevole, equilibrata e sostenibile</strong>, lasciando spazio ai momenti di convivialità che la vita ci offre. Il mio obiettivo è creare <strong>piani nutrizionali su misura</strong>, adattandoli allo stile di vita di ogni paziente e aiutandolo a sviluppare un <strong>rapporto sano con il cibo</strong>.
+</p>
+<p>
+  Se vuoi migliorare il tuo rapporto con il cibo e imparare a nutrirti in modo consapevole senza rinunce, <strong>contattami</strong> e <strong>prenota subito un appuntamento</strong>!
+</p>
+
     </div>
 
     <!-- Colonna per l'immagine -->
@@ -517,7 +518,10 @@ const prevCard = () => {
 
 @media (max-width: 1024px) { 
 
-
+  .home {
+    height: 100%;
+    width: 100%;
+  }
   /* Adattamento per tablet */
   .story {
     padding-left: 5%;

@@ -151,6 +151,64 @@ const closeNavbar = () => {
   }
 }
 
+@media (max-width: 1024px) {
+  .navbar {
+    height: 50px; 
+    padding: 5px 15px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+
+  .navbar-brand {
+    font-size: 0.8rem; 
+    white-space: nowrap; 
+    flex-grow: 1; 
+    text-align: left; 
+  }
+
+  .navbar-toggler {
+    font-size: 1.2rem; 
+    padding: 5px 8px; 
+    border: none; 
+  }
+
+  .navbar-collapse {
+    background-color: #6f716f;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    padding: 10px 0;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-link {
+    display: block; 
+    margin-left: 15%;
+    padding: 15px 20px;
+    color: white !important;
+    font-size: 1.2rem; 
+    padding: 10px 0; 
+    width: 100%;
+    text-align: left; 
+    white-space: nowrap; 
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+  .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+  }
+}
+
 
 
 
