@@ -110,7 +110,7 @@ const closeNavbar = () => {
   }
 
   .navbar-toggler {
-    font-size: 1.2rem; 
+    font-size:1.2rem; 
     padding: 5px 8px; 
     border: none; 
   }
@@ -227,7 +227,7 @@ const closeNavbar = () => {
   }
 
   .navbar-toggler {
-    font-size: 1rem; 
+    font-size: 1.3rem; 
     padding: 5px 6px; 
     border: none; 
   }

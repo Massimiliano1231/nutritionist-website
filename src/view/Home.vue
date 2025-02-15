@@ -68,12 +68,12 @@
 
   <section class="strengths">
     <div class="container">
-      <h2 class="title-s">punti di forza</h2>
+      <h2 class="title-s">I miei punti di forza:</h2>
       <div class="strength-card">
         <button class="arrow left-arrow" @click="prevCard">←</button>
         <div class="card">
           <h3 class="card-title">{{ strengths[currentIndex].title }}</h3>
-          <p class="card-description">{{ strengths[currentIndex].description }}</p>
+          <p class="card-description" v-html="formattedStrengths[currentIndex].description"></p>
         </div>
         <button class="arrow right-arrow" @click="nextCard">→</button>
       </div>
@@ -129,15 +129,28 @@
 import { ref } from "vue";
 
 const currentIndex = ref(0);
+const description = "L’alimentazione gioca un ruolo fondamentale nella prevenzione e nella gestione di molte patologie. Offro supporto nutrizionale per chi soffre di:\n\n1. Patologie metaboliche: diabete di tipo 1 e 2, insulino-resistenza, dislipidemie, sindrome metabolica, obesità, ipertiroidismo e ipotiroidismo, sindrome dell'intestino irritabile ed endometriosi.\n\n2. Patologie gastrointestinali: reflusso gastroesofageo, gastrite, colon irritabile (IBS), malattia di Crohn e colite ulcerosa (MICI), celiachia, intolleranze alimentari (lattosio, FODMAPs, nichel, istamina), disbiosi intestinale, gonfiore addominale, stipsi e diarrea cronica.\n\n3. Patologie autoimmuni e infiammatorie: Tiroidite di Hashimoto, Artrite reumatoide, Sclerosi multipla, Fibromialgia, Psoriasi e dermatite atopica.\n\n4. Patologie epatiche e renali: Steatosi epatica (fegato grasso), insufficienza renale, calcolosi renale (calcoli ai reni).";
+const description1 = "Le esigenze nutrizionali della donna cambiano nel tempo e meritano un’attenzione specifica.\n\nMi occupo di:\n\n1. Menopausa e invecchiamento: strategie nutrizionali per contrastare l’aumento di peso, la perdita di massa muscolare e il rallentamento metabolico tipici di questa fase.\n\n2. Linfedema e lipedema: grazie al mio percorso di studi in Scienze delle attività motorie e sportive, offro alle mie pazienti strategie di allenamento specifiche e ben supportate a livello nutrizionale per ridurre infiammazione e ritenzione di liquidi, migliorando la qualità della vita.\n\n3. Cellulite e ritenzione idrica: sebbene spesso confuse, la cellulite è un’infiammazione del tessuto adiposo, mentre la ritenzione idrica è un accumulo eccessivo di liquidi. Un piano nutrizionale corretto affiancato ad un adeguato allenamento aiuta a ridurre entrambi, migliorando la circolazione e la tonicità della pelle.";
 
 
 const strengths = [
-  { title: "Dimagrimento efficace", description: "loremddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd." },
-  { title: "Miglioramento delle performance", description: "loremddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" },
-  { title: "Educazione alimentare", description: "loremddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd." },
-  { title: "Piani nutrizionali personalizzati", description: "loremddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" },
-  { title: "Supporto costante", description: "loremddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" }
+  { title: "Dimagrimento e perdita di peso", description: "Aiuto i miei pazienti a raggiungere il peso ideale in modo sano ed equilibrato, senza diete drastiche né privazioni inutili. Il mio approccio si basa su un’alimentazione personalizzata e sostenibile, che permette di perdere peso in modo graduale e definitivo, rispettando la salute del paziente." },
+  { title: "Ricomposizione corporea e aumento di peso ", description: "Aiuto i miei pazienti a migliorare la propria composizione corporea attraverso dei percorsi mirati di 'bulk' e di 'cut'. Nel percorso di 'bulk' favorisco l'aumento della massa muscolare tenendo sotto controllo la massa grassa. Nel percorso di 'cut' favorisco la perdita di massa grassa tenendo sotto controllo la massa muscolare." },
+  { title: "Alimentazione per atleti e sportivi", description: "Una nutrizione ottimale è fondamentale per chi pratica sport, sia a livello amatoriale sia agonistico. Elaboro piani nutrizionali specifici per migliorare la performance, sostenere il recupero muscolare e ottimizzare la composizione corporea, adattando l’alimentazione al tipo di allenamento e agli obiettivi sportivi." },
+  {
+    title: "Nutrizione femminile: salute e benessere nelle diverse fasi della vita",
+    description: description1 
+  },
+  {
+    title: "Nutrizione e condizioni patologiche",
+    description: description },
 ];
+
+const formattedStrengths = strengths.map(strength => ({
+  ...strength,
+  description: strength.description.replace(/\n/g, "<br>")
+}));
+
 
 const nextCard = () => {
   currentIndex.value = (currentIndex.value + 1) % strengths.length;
