@@ -55,7 +55,7 @@
     <div class="container">
       <div class="how-it-works-content">
         <div class="text-section">
-          <h2 class="title-h">Come funziona?</h2>
+          <h2 class="title-h">Iter del percorso nutrizionale</h2>
           <div class="step" v-for="(step, index) in steps" :key="index">
             <h3 class="step-title">{{ step.title }}</h3>
             <p class="step-description">{{ step.description }}</p>
@@ -86,9 +86,9 @@
         <div class="brand">
         </div>
         <h2 class="footer-title">Restiamo in contatto</h2>
-        <p class="footer-description">
+      <!--  <p class="footer-description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, illum officia soluta aliquid asperiores mollitia culpa exercitationem totam, accusantium hic nobis. Maxime obcaecati, quisquam architecto dignissimos eveniet aperiam possimus eligendi..
-        </p>
+        </p> -->
         <div class="contact-info">
           <div class="contact-item">
             <img src="/icons/email.svg" alt="Email" class="contact-icon" />
@@ -159,11 +159,10 @@ const prevCard = () => {
 
 
   const steps = [
-  { title: "Contattaci e fissa un appuntamento", description: "Prenota una visita per discutere i tuoi obiettivi nutrizionali e ricevere una prima consulenza." },
-  { title: "La prima visita", description: "Un incontro dettagliato per valutare le tue esigenze alimentari e il tuo stile di vita." },
-  { title: "La consegna del piano nutrizionale", description: "Ricevi un piano alimentare personalizzato creato in base alle tue necessità." },
-  { title: "I controlli", description: "Monitoriamo i tuoi progressi e apportiamo eventuali modifiche per ottimizzare i risultati." },
-  { title: "Il mantenimento", description: "Supporto continuo per aiutarti a mantenere uno stile di vita sano e bilanciato nel tempo." }
+  { title: "Contattami e fissa un appuntamento", description: "Scrivimi su whatsapp o via mail indicandomi il motivo per cui vuoi iniziare il percorso e in che modo posso aiutarti." },
+  { title: "Prima visita", description: "n questo nostro primo incontro faremo una lunga chiacchierata conoscitiva, valuterò il tuo stato di salute e la tua composizione corporea con strumenti di analisi oggettivi e standardizzati nel tempo, e stabiliremo insieme quale strada intraprendere per raggiungere l'obbiettivo." },
+  { title: "Consegna del piano nutrizionale", description: "Entro 5-7 giorni dal nostro primo incontro ti invierò il tuo piano nutrizionale personalizzato via mail. A questo punto potrai iniziare il percorso nutrizionale ed io sarò al tuo fianco per farti da guida e per risolvere ogni tuo dubbio o problematica che si presenterà." },
+  { title: "Visita di Follow-Up", description: "Periodicamente svolgeremo dei successivi incontri fondamentali per verificare l'andamento del percorso. In queste fasi andrò a utilizzare tutti gli strumenti di analisi per confrontare i dati a quelli delle visite precedenti, e valuteremo insieme come continuare il percorso. L'obbiettivo sarà quello di aiutarti a mantenere delle sane abitudini e di adattare il piano nutrizionale ai tuoi vari momenti di vita." },
 ];
 
 
