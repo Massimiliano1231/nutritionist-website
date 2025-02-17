@@ -28,10 +28,10 @@
 
     </div>
 
-    <!-- Colonna per l'immagine -->
+    <!-- Colonna per l'immagine 
     <div class="colll">
       <img src="/home_banner.png" alt="Nutrizionista" class="img-fluid rounded story-img">
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -173,7 +173,7 @@ const prevCard = () => {
 
   const steps = [
   { title: "Contattami e fissa un appuntamento", description: "Scrivimi su whatsapp o via mail indicandomi il motivo per cui vuoi iniziare il percorso e in che modo posso aiutarti." },
-  { title: "Prima visita", description: "n questo nostro primo incontro faremo una lunga chiacchierata conoscitiva, valuterò il tuo stato di salute e la tua composizione corporea con strumenti di analisi oggettivi e standardizzati nel tempo, e stabiliremo insieme quale strada intraprendere per raggiungere l'obbiettivo." },
+  { title: "Prima visita", description: "In questo nostro primo incontro faremo una lunga chiacchierata conoscitiva, valuterò il tuo stato di salute e la tua composizione corporea con strumenti di analisi oggettivi e standardizzati nel tempo, e stabiliremo insieme quale strada intraprendere per raggiungere l'obbiettivo." },
   { title: "Consegna del piano nutrizionale", description: "Entro 5-7 giorni dal nostro primo incontro ti invierò il tuo piano nutrizionale personalizzato via mail. A questo punto potrai iniziare il percorso nutrizionale ed io sarò al tuo fianco per farti da guida e per risolvere ogni tuo dubbio o problematica che si presenterà." },
   { title: "Visita di Follow-Up", description: "Periodicamente svolgeremo dei successivi incontri fondamentali per verificare l'andamento del percorso. In queste fasi andrò a utilizzare tutti gli strumenti di analisi per confrontare i dati a quelli delle visite precedenti, e valuteremo insieme come continuare il percorso. L'obbiettivo sarà quello di aiutarti a mantenere delle sane abitudini e di adattare il piano nutrizionale ai tuoi vari momenti di vita." },
 ];
@@ -196,7 +196,7 @@ const prevCard = () => {
     .banner {
        margin-top: 50px;
        height: 60%;
-       background-color: #ece2d0;
+       background-color: #f9f5f0;
     }
     
   .banner img {
@@ -210,7 +210,7 @@ const prevCard = () => {
   
 .story {
   margin-top: -10%;
-  background-color: #ece2d0; 
+  background-color: #f9f5f0; 
   padding: 60px 20px;
   border-radius: 10px;
   padding-left: 17%;
@@ -220,7 +220,13 @@ const prevCard = () => {
   display: flex;
   width: 100%;
 }
-
+.coll {
+  flex: 1;
+  padding: 20px;
+  max-width: 800px; 
+  text-align: left; 
+  text-align: center;
+}
 .coll, .colll {
   flex: 1;
   padding: 20px;
@@ -590,7 +596,7 @@ const prevCard = () => {
   }
 
   .coll {
-    width: 90%;
+    width: 100%;
   }
 
   .colll {

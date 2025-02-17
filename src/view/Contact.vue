@@ -10,15 +10,15 @@
           loading="lazy" 
           allowfullscreen 
           referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2872.604088583041!2d11.36384331578631!3d44.38208427910207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fdc4c84d1b6e9%3A0x66a6f79b8d8cb570!2sPianoro%2C%20BO!5e0!3m2!1sit!2sit!4v1707561600000">
+          src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2850.696317276761!2d11.340933676708957!3d44.39835530391832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132b2a801b91f16b%3A0x68de4301b26566ca!2sVia%20Nazionale%2C%20106%2F2%2C%2040065%20Pianoro%20BO!5e0!3m2!1sit!2sit!4v1739817274033!5m2!1sit!2sit">
         </iframe>
       </div>
 
 
       <div class="info-container">
         <h2>Dove trovarmi</h2>
-        <p class="subtitle"><strong>Studio di xxxxx</strong></p>
-        <p class="address">Via Nazionale, 100<br>Pianoro (BO)</p>
+       <!-- <p class="subtitle"><strong>Studio di xxxxx</strong></p> -->
+        <p class="address">Via Nazionale, 106/2, 40065<br>Pianoro (BO)</p>
 
         <h3 class="orari">Orari</h3>
         <p><strong>Lun - Ven:</strong> 9:00 - 17:00</p>

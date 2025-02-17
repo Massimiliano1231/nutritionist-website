@@ -10,10 +10,12 @@
       <div class="col-lg-5 text-container">
         <h1 class="title">Dott. Domenico Silvestri</h1>
         <h2 class="subtitle">Personal trainer e biologo nutrizionista</h2>
-        <p>Il mio obiettivo è quello di <strong>educare il paziente ad uno stile di vita sano e attivo</strong>, con un percorso piacevole che vada a creare nuove abitudini, con un piano nutrizionale flessibile e sostenibile.</p>
-        <p>All’interno dello studio di nutrizione Gamberini ho trovato un’armonia professionale fondamentale per la creazione di progetti innovativi e funzionali.</p>
-        <p>Credo che l’interazione tra due o più figure professionali possa far nascere nuove idee, possa essere un modo per stimolarsi a vicenda nell’imparare cose nuove migliorando le proprie capacità e conoscenze.</p>
-        <p>Mi occupo di <strong>soggetti sportivi</strong> per migliorare le performance e di chi desidera ottenere una <strong>ricomposizione corporea</strong>. Ho una ottima formazione nel trattamento delle <strong>patologie gastrointestinali, neuromuscolari e metaboliche</strong>.</p>
+        <p>Il mio <strong>obiettivo</strong> è quello di guidare ogni persona verso uno <strong>stile di vita sano</strong> e <strong>attivo</strong>, attraverso un percorso <strong>piacevole</strong> e <strong>sostenibile</strong>. Credo che l’<strong>alimentazione</strong> non debba essere vissuta come una <strong>restrizione</strong>, ma come un'<strong>opportunità</strong> per migliorare il <strong>benessere</strong>, costruendo nuove <strong>abitudini</strong> con un <strong>piano nutrizionale</strong> <strong>flessibile</strong> e <strong>personalizzato</strong>.</p>
+
+<p>L’<strong>esperienza</strong> maturata lavorando in <strong>team</strong> presso lo studio della <strong>Dott.ssa Gamberini</strong> mi ha permesso di approfondire <strong>conoscenze fondamentali</strong> e di affinare il mio <strong>approccio nutrizionale</strong>. Il <strong>confronto</strong> con altre <strong>figure professionali</strong> è stato una <strong>preziosa occasione di crescita</strong>, che mi ha aiutato a sviluppare <strong>strategie</strong> sempre più <strong>efficaci</strong> per migliorare lo <strong>stato di salute</strong> delle persone.</p>
+
+<p>Mi occupo di <strong>nutrizione sportiva</strong>, supportando <strong>atleti</strong> e <strong>sportivi</strong> nel migliorare le <strong>performance</strong> e la <strong>composizione corporea</strong>. Inoltre, ho una solida <strong>esperienza</strong> nel trattamento di <strong>patologie gastrointestinali</strong>, <strong>metaboliche</strong> ed <strong>endocrine</strong>, <strong>autoimmuni</strong> e <strong>neuromuscolari</strong>, offrendo <strong>percorsi personalizzati</strong> per il miglioramento della <strong>salute</strong> e della <strong>qualità di vita</strong>.</p>
+
       </div>
     </div>
 
@@ -22,19 +24,17 @@
       <h2 class="info-title">Perchè segliermi</h2>
 
       <div class="info-content">
-        <h3>lorem ipsus</h3>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae itaque magni inventore architecto nihil aliquid deleniti numquam dolorem, adipisci beatae quod cum repellat doloremque ea optio suscipit, quia, explicabo corporis.</p>
+        <h3>1. Empatia e comprensione</h3>
+        <p>Credo che il miglior modo per accompagnare qualcuno in un percorso nutrizionale sia comprenderne davvero le difficoltà e le esigenze. Vivo in prima persona i principi di un’alimentazione sana e di uno stile di vita equilibrato, e questo mi permette di mettermi nei panni di chi si affida a me. Per questo il mio obiettivo non è solo darti un piano nutrizionale, ma fornirti un supporto costante per aiutarti a costruire nuove abitudini in modo sereno e sostenibile.
+        </p>
       </div>
 
       <div class="info-content">
-        <h3>lorem ipsus</h3>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae itaque magni inventore architecto nihil aliquid deleniti numquam dolorem, adipisci beatae quod cum repellat doloremque ea optio suscipit, quia, explicabo corporis.</p>
+        <h3>2. Professionalità, aggiornamento continuo e strumenti di analisi all'avanguardia</h3>
+        <p>La nutrizione è una scienza in continua evoluzione, ed è per questo che mi dedico costantemente allo studio e alla formazione. Ogni persona è unica, e per questo motivo valuto ogni caso con la massima attenzione, stilando piani nutrizionali personalizzati basati su un'analisi approfondita delle necessità e degli obiettivi individuali. Inoltre, mi avvalgo di strumenti di analisi avanzati per monitorare i progressi in modo oggettivo, fornendo dati concreti che permettono di ottimizzare il percorso nutrizionale nel tempo.</p>
       </div>
 
-      <div class="info-content">
-        <h3>lorem ipsus</h3>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae itaque magni inventore architecto nihil aliquid deleniti numquam dolorem, adipisci beatae quod cum repellat doloremque ea optio suscipit, quia, explicabo corporis.</p>
-      </div>
+
     </div>
   </section>
 
@@ -43,9 +43,10 @@
     <div class="container">
       <img src="/home_banner.png" alt="Studio Nutrizionista" class="img-fluid rounded">
       <div class="text-content">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, aperiam quas rerum modi cupiditate mollitia minus at nam error, asperiores nemo perferendis. A minus odio eligendi reiciendis quae minima recusandae.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, accusantium eius? Porro, doloremque expedita cupiditate tempore magnam exercitationem natus. Praesentium, animi! Quo unde, asperiores labore eos saepe neque autem facere.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, cumque! Nam, dolore? Tenetur sapiente fuga rem accusamus totam eveniet unde. Eum similique voluptatum nam labore ab est vel, quo alias!</p>
+        <div class="info-content">
+        <h3>3. Percorso personalizzato e sostenibile</h3>
+        <p>Non credo nelle soluzioni standardizzate né nelle diete restrittive. Ogni piano alimentare che elaboro è studiato per adattarsi allo stile di vita, ai gusti e alle esigenze della persona, in modo da renderlo facilmente sostenibile nel lungo periodo. L’obiettivo non è solo ottenere risultati, ma mantenerli nel tempo, migliorando la qualità della vita senza rinunce estreme.</p>
+      </div>
       </div>
     </div>
   </section>
