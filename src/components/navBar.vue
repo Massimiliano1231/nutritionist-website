@@ -1,37 +1,25 @@
 <template>
-  
-  <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top w-100 px-5">
-    <div class="container-fluid">
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <img src="/logo_transparent.png" alt="Logo" class="logo">
+        <div class="brand-text">
+          <span class="name">DOTT. Domenico Silvestri</span>
+          <span class="subtitle">Biologo Nutrizionista</span>
+        </div>
+      </div>
 
-      <a class="navbar-brand " href="#">DOTT. Domenico Silvestri</a>
-
-
-      <button class="navbar-toggler" type="button" @click="toggleNavbar" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler" @click="toggleNavbar">
+        ☰
       </button>
 
-
-      <div class="collapse navbar-collapse justify-content-center"  :class="{ 'show': isOpen }"  id="navbarNav">
-        <ul class="navbar-nav gap-4"> 
-          <li class="nav-item">
-            <router-link class="nav-link fs-5" to="/" @click="closeNavbar">Home</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link fs-5" to="/About" @click="closeNavbar">Chi sono</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link fs-5" to="/visite" @click="closeNavbar">Visite</router-link>
-          </li>
-         <!-- <li class="nav-item">
-            <router-link class="nav-link fs-5" to="/partner">Partner e collaborazioni</router-link>
-          </li> -->
-          <li class="nav-item">
-            <router-link class="nav-link fs-5" to="/faq" @click="closeNavbar">FAQ</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link fs-5" to="/contatti" @click="closeNavbar">Dove trovarmi</router-link>
-          </li>
+      <div class="navbar-links" :class="{ 'open': isOpen }">
+        <ul>
+          <li><router-link to="/" @click="closeNavbar">Home</router-link></li>
+          <li><router-link to="/About" @click="closeNavbar">Chi sono</router-link></li>
+          <li><router-link to="/visite" @click="closeNavbar">Visite</router-link></li>
+          <li><router-link to="/faq" @click="closeNavbar">FAQ</router-link></li>
+          <li><router-link to="/contatti" @click="closeNavbar">Dove trovarmi</router-link></li>
         </ul>
       </div>
     </div>
@@ -57,218 +45,181 @@ const closeNavbar = () => {
 
 
 <style scoped>
-
-
+/* Navbar */
 .navbar {
-  height: 10%;
-  justify-content: space-between;
-}
-
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  white-space: nowrap; 
-}
-
-.navbar-nav {
-  margin-left: -10%;
+  background: #f4f4f4;
+  padding: 20px 40px;
   display: flex;
-  justify-content: center;
-  flex-grow: 1; 
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
-.nav-item {
-  margin: 0 15px;
+/* Contenitore */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.nav-link {
-  font-size: 1.2rem;
-  font-weight: 500;
+/* Logo e testo */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 60px;
+  margin-right: 12px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 1.6rem;
+  font-weight: bold;
   color: #333;
-  padding: 10px 15px;
 }
 
-.nav-link:hover {
+.subtitle {
+  font-size: 1.2rem;
+  color: #4d774e;
+  font-style: italic;
+}
+
+/* Navbar link */
+.navbar-links ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding: 0;
+}
+
+.navbar-links ul li {
+  display: inline-block;
+}
+
+.navbar-links ul li a {
+  text-decoration: none;
+  font-size: 1.4rem; /* 🔥 TESTI PIÙ GRANDI 🔥 */
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-links ul li a:hover {
   color: #4d774e;
 }
 
+/* Menu mobile & tablet */
+.navbar-toggler {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
-
-
+/* 💻 MEDIA QUERY PER TABLET (max 1024px) */
 @media (max-width: 1024px) {
-  .navbar {
-    height: 50px; 
-    padding: 5px 15px; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-  }
-
-  .navbar-brand {
-    font-size: 0.8rem; 
-    white-space: nowrap; 
-    flex-grow: 1; 
-    text-align: left; 
-  }
-
   .navbar-toggler {
-    font-size: 1.2rem; 
-    padding: 5px 8px; 
-    border: none; 
+    display: block; /* Fa comparire il bottone ☰ anche su tablet */
   }
 
-  .navbar-collapse {
-    background-color: #6f716f;
-    width: 100%;
+  .navbar-links {
     position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 999;
+    top:100%;
+    right: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    display: none;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 20px; /* Allinea a sinistra il menu */
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navbar-links ul li a {
+    font-size: 1.3rem;
     padding: 10px 0;
   }
-
-  .navbar-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-link {
-    display: block; 
-    margin-left: 15%;
-    padding: 15px 20px;
-    color: white !important;
-    font-size: 1.2rem; 
-    padding: 10px 0; 
-    width: 100%;
-    text-align: left; 
-    white-space: nowrap; 
-  }
-
-  .nav-item {
-    width: 100%;
-  }
-  .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.2); 
-  }
 }
 
-
-@media (max-width: 468px) {
-  .navbar {
-    height: 40px; 
-    padding: 5px 10px; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-  }
-
-  .navbar-brand {
-    font-size: 0.7rem; 
-    white-space: nowrap; 
-    flex-grow: 1; 
-    text-align: left; 
-  }
-
-  .navbar-toggler {
-    font-size: 1.3rem; 
-    padding: 5px 6px; 
-    border: none; 
-  }
-
-  .navbar-collapse {
-    background-color: #6f716f;
-    width: 100%;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 999;
-    padding: 8px 0;
-  }
-
-  .navbar-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-link {
-    display: block; 
-    margin-left: 15%;
-    padding: 12px 15px;
-    color: white !important;
-    font-size: 1rem; 
-    padding: 8px 0; 
-    width: 100%;
-    text-align: left; 
-    white-space: nowrap; 
-  }
-
-  .nav-item {
-    width: 100%;
-  }
-  .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.2); 
-  }
-}
+/* 📱 MEDIA QUERY PER TELEFONO (max 768px) */
 @media (max-width: 768px) {
   .navbar {
-    height: 50px; 
-    padding: 5px 15px; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
+    padding: 10px 20px;
   }
 
-  .navbar-brand {
-    font-size: 0.9rem; 
-    white-space: nowrap; 
-    flex-grow: 1; 
-    text-align: left; 
+  .logo {
+    margin-right: 8px;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
   }
 
   .navbar-toggler {
-    font-size:1.2rem; 
-    padding: 5px 8px; 
-    border: none; 
+    display: block;
   }
 
-  .navbar-collapse {
-    background-color: #6f716f;
-    width: 100%;
+  .navbar-links {
     position: absolute;
     top: 100%;
-    left: 0;
-    z-index: 999;
+    right: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
-  }
-
-  .navbar-nav {
-    display: flex;
+    display: none;
     flex-direction: column;
-    align-items: center;
+    text-align: left;
+    padding-left: 20px; /* 🔥 ALLINEA A SINISTRA IL MENU 🔥 */
   }
 
-  .nav-link {
-    display: block; 
-    margin-left: 15%;
-    padding: 15px 20px;
-    color: white !important;
-    font-size: 1.2rem; 
-    padding: 10px 0; 
-    width: 100%;
-    text-align: left; 
-    white-space: nowrap; 
+  .navbar-links.open {
+    display: flex;
   }
 
-  .nav-item {
+  .navbar-links ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar-links ul li {
     width: 100%;
   }
-  .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.2); 
+
+  .navbar-links ul li a {
+    font-size: 1.3rem;
+    padding: 12px 0;
   }
 }
-
-
-
 </style>
+
+

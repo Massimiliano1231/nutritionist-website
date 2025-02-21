@@ -1,5 +1,5 @@
 <template>
-  <div class="about-container">
+<div class="about-container">
     <div class="row">
 
       <div class="col-lg-5 image-container">
@@ -19,45 +19,37 @@
       </div>
     </div>
 
-  <section class="info-section">
-    <div class="container">
-      <h2 class="info-title">Perchè segliermi</h2>
-
-      <div class="info-content">
-        <h3>1. Empatia e comprensione</h3>
-        <p>Credo che il miglior modo per accompagnare qualcuno in un percorso nutrizionale sia comprenderne davvero le difficoltà e le esigenze. Vivo in prima persona i principi di un’alimentazione sana e di uno stile di vita equilibrato, e questo mi permette di mettermi nei panni di chi si affida a me. Per questo il mio obiettivo non è solo darti un piano nutrizionale, ma fornirti un supporto costante per aiutarti a costruire nuove abitudini in modo sereno e sostenibile.
-        </p>
+    <section class="info-section">
+      <div class="container">
+        <h2 class="info-title">I miei punti di forza</h2>
+        <div v-for="(strength, index) in strengths" :key="index" class="info-content">
+          <h3>{{ index + 1 }}. {{ strength.title }}</h3>
+          <p v-for="(paragraph, i) in strength.description.split('\n\n')" :key="i">
+            {{ paragraph }}
+          </p>
+        </div>
       </div>
-
-      <div class="info-content">
-        <h3>2. Professionalità, aggiornamento continuo e strumenti di analisi all'avanguardia</h3>
-        <p>La nutrizione è una scienza in continua evoluzione, ed è per questo che mi dedico costantemente allo studio e alla formazione. Ogni persona è unica, e per questo motivo valuto ogni caso con la massima attenzione, stilando piani nutrizionali personalizzati basati su un'analisi approfondita delle necessità e degli obiettivi individuali. Inoltre, mi avvalgo di strumenti di analisi avanzati per monitorare i progressi in modo oggettivo, fornendo dati concreti che permettono di ottimizzare il percorso nutrizionale nel tempo.</p>
-      </div>
-
-
-    </div>
-  </section>
-
-
-  <section class="image-top-text-bottom">
-    <div class="container">
-      <img src="/home_banner.png" alt="Studio Nutrizionista" class="img-fluid rounded">
-      <div class="text-content">
-        <div class="info-content">
-        <h3>3. Percorso personalizzato e sostenibile</h3>
-        <p>Non credo nelle soluzioni standardizzate né nelle diete restrittive. Ogni piano alimentare che elaboro è studiato per adattarsi allo stile di vita, ai gusti e alle esigenze della persona, in modo da renderlo facilmente sostenibile nel lungo periodo. L’obiettivo non è solo ottenere risultati, ma mantenerli nel tempo, migliorando la qualità della vita senza rinunce estreme.</p>
-      </div>
-      </div>
-    </div>
-  </section>
-
-
-</div>
-
+    </section>
+  </div>
 </template>
+
+<script setup>
+const description = "L’alimentazione gioca un ruolo fondamentale nella prevenzione e nella gestione di molte patologie. Offro supporto nutrizionale per chi soffre di:\n\n1. Patologie metaboliche: diabete di tipo 1 e 2, insulino-resistenza, dislipidemie, sindrome metabolica, obesità, ipertiroidismo e ipotiroidismo, sindrome dell'intestino irritabile ed endometriosi.\n\n2. Patologie gastrointestinali: reflusso gastroesofageo, gastrite, colon irritabile (IBS), malattia di Crohn e colite ulcerosa (MICI), celiachia, intolleranze alimentari (lattosio, FODMAPs, nichel, istamina), disbiosi intestinale, gonfiore addominale, stipsi e diarrea cronica.\n\n3. Patologie autoimmuni e infiammatorie: Tiroidite di Hashimoto, Artrite reumatoide, Sclerosi multipla, Fibromialgia, Psoriasi e dermatite atopica.\n\n4. Patologie epatiche e renali: Steatosi epatica (fegato grasso), insufficienza renale, calcolosi renale (calcoli ai reni).";
+
+const description1 = "Le esigenze nutrizionali della donna cambiano nel tempo e meritano un’attenzione specifica.\n\nMi occupo di:\n\n1. Menopausa e invecchiamento: strategie nutrizionali per contrastare l’aumento di peso, la perdita di massa muscolare e il rallentamento metabolico tipici di questa fase.\n\n2. Linfedema e lipedema: grazie al mio percorso di studi in Scienze delle attività motorie e sportive, offro alle mie pazienti strategie di allenamento specifiche e ben supportate a livello nutrizionale per ridurre infiammazione e ritenzione di liquidi, migliorando la qualità della vita.\n\n3. Cellulite e ritenzione idrica: sebbene spesso confuse, la cellulite è un’infiammazione del tessuto adiposo, mentre la ritenzione idrica è un accumulo eccessivo di liquidi. Un piano nutrizionale corretto affiancato ad un adeguato allenamento aiuta a ridurre entrambi, migliorando la circolazione e la tonicità della pelle.";
+
+const strengths = [
+  { title: "Dimagrimento e perdita di peso", description: "Aiuto i miei pazienti a raggiungere il peso ideale in modo sano ed equilibrato, senza diete drastiche né privazioni inutili. Il mio approccio si basa su un’alimentazione personalizzata e sostenibile, che permette di perdere peso in modo graduale e definitivo, rispettando la salute del paziente." },
+  { title: "Ricomposizione corporea e aumento di peso ", description: "Aiuto i miei pazienti a migliorare la propria composizione corporea attraverso dei percorsi mirati di 'bulk' e di 'cut'. Nel percorso di 'bulk' favorisco l'aumento della massa muscolare tenendo sotto controllo la massa grassa. Nel percorso di 'cut' favorisco la perdita di massa grassa tenendo sotto controllo la massa muscolare." },
+  { title: "Alimentazione per atleti e sportivi", description: "Una nutrizione ottimale è fondamentale per chi pratica sport, sia a livello amatoriale sia agonistico. Elaboro piani nutrizionali specifici per migliorare la performance, sostenere il recupero muscolare e ottimizzare la composizione corporea, adattando l’alimentazione al tipo di allenamento e agli obiettivi sportivi." },
+  { title: "Nutrizione femminile: salute e benessere nelle diverse fasi della vita", description: description1 },
+  { title: "Nutrizione e condizioni patologiche", description: description },
+];
+</script>
+
 <style scoped>
 .about-container {
-  padding-top: 7%;
+  padding-top: 10%;
     width: 100%;
     height: 100%;
     margin-right: -300px;
@@ -108,10 +100,10 @@
   text-align: left;
 }
 
+
 .info-section {
   background-color: #f9f5f0;
   padding: 80px 0;
-  text-align: left;
 }
 
 .container {
@@ -124,7 +116,6 @@
   font-weight: bold;
   color: #2d2d2d;
   margin-bottom: 40px;
-  text-align: left;
 }
 
 .info-content {
@@ -142,139 +133,13 @@
   font-size: 1.2rem;
   color: #555;
   line-height: 1.6;
+  margin-bottom: 10px;
 }
 
-
-.image-top-text-bottom {
-  margin-top: -50px;
-  background-color: #f9f5f0;
-  padding: 80px 0;
-  text-align: center;
-}
-
-.image-top-text-bottom img {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-  display: block;
-  margin: 0 auto 30px auto;
-}
-
-.text-content {
-  padding-top: 60px;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.text-content p {
-  font-size: 1.2rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-.image-container img,
-.image-top-text-bottom img {
-  border-radius: 20px; 
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); 
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
-}
-
-.image-container img:hover,
-.image-top-text-bottom img:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2); 
-}
-
-
-
-
-
+/* 📱 MEDIA QUERY PER TABLET (max 1024px) */
 @media (max-width: 1024px) {
   .about-container {
-    padding-top: 10%;
-    width: 100%;
-    height: 100%;
-  }
-
-  .row {
-    flex-direction: column;
-    align-items: left;
-    text-align: left;
-  }
-
-  .image-container {
-    justify-content: left;
-    margin-bottom: 20px;
-  }
-
-  .image-container img {
-    width: 100%;
-    height: auto;
-    margin-left: 0;
-  }
-
-  .text-container {
-    padding: 0 15px;
-    text-align: left;
-  }
-
-  .title {
-    font-size: 2.5rem;
-    text-align: center;
-  }
-
-  .subtitle {
-    font-size: 1.3rem;
-    text-align: left;
-  }
-
-  .text-container p {
-    font-size: 1.1rem;
-    text-align: left;
-  }
-
-  .info-section {
-    padding: 60px 20px;
-  }
-
-  .info-title {
-    font-size: 2.2rem;
-    text-align: center;
-  }
-
-  .info-content h3 {
-    font-size: 1.6rem;
-    text-align: left;
-  }
-
-  .info-content p {
-    font-size: 1.1rem;
-    text-align: left;
-  }
-
-  .image-top-text-bottom {
-    padding: 50px 20px;
-  }
-
-  .image-top-text-bottom img {
-    width: 100%;
-  }
-
-  .text-content {
-    padding-top: 40px;
-    text-align: center;
-  }
-
-  .text-content p {
-    font-size: 1.1rem;
-    text-align: left;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-container {
-    padding-top: 25%;
+    padding-top: 20%;
     width: 100%;
     height: 100%;
   }
@@ -286,6 +151,75 @@
   }
 
   .image-container {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .image-container img {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .text-container {
+    padding: 0 15px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    padding-top: 20px;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .text-container p {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+
+  .info-section {
+    padding: 50px 15px;
+  }
+
+  .info-title {
+    font-size: 2.2rem;
+  }
+
+  .info-content h3 {
+    font-size: 1.6rem;
+  }
+
+  .info-content p {
+    font-size: 1.1rem;
+  }
+}
+  
+
+
+/* 📱 MEDIA QUERY PER TELEFONO (max 768px) */
+@media (max-width: 768px) {
+  .about-container {
+    padding-top: 50%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .image-container {
+    height: 100%;
+    width: 100%;
     justify-content: center;
     margin-bottom: 20px;
   }
@@ -293,7 +227,6 @@
   .image-container img {
     margin-top: -40px;
     width: 100%;
-    height: auto;
     margin-left: 0;
   }
 
@@ -323,41 +256,20 @@
   }
 
   .info-section {
-    padding: 60px 20px;
+    padding: 50px 15px;
   }
 
   .info-title {
     font-size: 2rem;
-    text-align: center;
   }
 
   .info-content h3 {
     font-size: 1.5rem;
-    text-align: left;
   }
 
   .info-content p {
-    padding-top: 20px;
-    font-size: 1.1rem;
-    text-align: left;
-  }
-
-  .image-top-text-bottom {
-    padding: 50px 20px;
-  }
-
-  .image-top-text-bottom img {
-    width: 100%;
-  }
-
-  .text-content {
-    padding-top: 40px;
-    text-align: center;
-  }
-
-  .text-content p {
-    font-size: 1.1rem;
-    text-align: left;
+    font-size: 1rem;
   }
 }
 </style>
+

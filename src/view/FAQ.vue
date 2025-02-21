@@ -80,7 +80,7 @@ const faqs = ref([
 
 <style scoped>
 .FAQ {
-  padding-top: 3%;
+  padding-top: 7%;
   padding-bottom: 100px; 
   width: 100%;
   height: 100%;
@@ -168,11 +168,17 @@ const faqs = ref([
   opacity: 1;
   transform: translateY(0);
 }
-
+@media (max-width: 1024px) {
+  .FAQ {
+    padding-top: 15%;
+    width: 100%;
+    height: 100%;
+  }
+}
 
 @media (max-width: 768px) {
   .FAQ {
-    padding-top: 25%;
+    padding-top: 40%;
     width: 100%;
     height: 100%;
   }

@@ -373,10 +373,55 @@ button:hover {
   }
 
 
-  @media (max-width: 768px) {
+
+
+@media (max-width: 1024px) {
+  .contact-section {
+    padding-top: 20%;
+    padding-bottom: 15%;
+  }
+
+  .location-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .map-container {
+    width: 100%;
+    height: 60vh;
+  }
+
+  .info-container {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+  }
+
+  h2, .contatti {
+    font-size: 2.8rem;
+  }
+
+  .subtitle, .address, h3, p {
+    font-size: 1.5rem;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-contact, .contact-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
   .contact-section {
     background-color: #f8f1e7;
-    padding-top: 20%;
+    padding-top: 40%;
     height: 100%;
     width: 100%;
   }
@@ -489,49 +534,6 @@ button:hover {
   .contact-container {
     display: flex;
     justify-content: center;
-  }
-}
-
-@media (max-width: 1024px) {
-  .contact-section {
-    padding-top: 15%;
-    padding-bottom: 15%;
-  }
-
-  .location-container {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .map-container {
-    width: 100%;
-    height: 60vh;
-  }
-
-  .info-container {
-    width: 100%;
-    text-align: center;
-    padding: 30px;
-  }
-
-  h2, .contatti {
-    font-size: 2.8rem;
-  }
-
-  .subtitle, .address, h3, p {
-    font-size: 1.5rem;
-  }
-
-  .contact-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-
-  .footer-contact, .contact-container {
-    width: 90%;
-    margin: 0 auto;
-    padding: 20px;
   }
 }
 

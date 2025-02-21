@@ -81,7 +81,7 @@ const steps = [
 <style scoped>
 
 .visit {
-  margin-top: 2%;
+  margin-top: 0;
   width: 100%;
   height: 100%;
   background-color: #f9f5f0;
@@ -133,9 +133,15 @@ const steps = [
   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 1024px) {
+  .visit {
+    margin-top: 15%;
+  }
+}
+
 @media (max-width: 768px) {
   .visit {   
-    padding-top: 10%;
+    padding-top: 20%;
     width: 100%;
     height: 100%;
   }
