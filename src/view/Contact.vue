@@ -433,7 +433,7 @@ button:hover {
 
   .map-container {
     width: 100%;
-    height: 70%;
+    height: 50vh;
   }
 
   .info-container {
