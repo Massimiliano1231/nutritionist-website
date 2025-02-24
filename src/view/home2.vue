@@ -132,7 +132,7 @@
       <div class="footer-content">
         <div class="brand">
         </div>
-        <h2 class="footer-title">Restiamo in contatto</h2>
+        <h2 class="footer-title">CONTATTI</h2>
       <!--  <p class="footer-description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, illum officia soluta aliquid asperiores mollitia culpa exercitationem totam, accusantium hic nobis. Maxime obcaecati, quisquam architecto dignissimos eveniet aperiam possimus eligendi..
         </p> -->
