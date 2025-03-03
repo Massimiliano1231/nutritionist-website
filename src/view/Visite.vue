@@ -7,7 +7,7 @@
         <h2 class="step-title">{{ step.title }}</h2>
         <p class="step-description" v-html="step.description"></p>
         
-        <div v-if="index === 0 || index === 2" class="separator">
+        <div v-if="index === 0 || index === 2 || index === 1" class="separator">
           <img :src="step.image" alt="Separatore" class="separator-image">
         </div>
       </div>
@@ -52,17 +52,17 @@ const steps = [
   { 
     title: "1. Prenotazione dell’appuntamento", 
     description : description2,
-    image: "/home_banner.png" 
+    image: "/DSC3363.JPG" 
   },
   { 
     title: "2. Prima visita", 
     description : description1,
-    image: "/home_banner.png" 
+    image: "/bia.JPG" 
   },
   { 
     title: "3. Consegna del piano nutrizionale", 
     description : description3,
-    image: "/home_banner.png" 
+    image: "/DSC3403.JPG" 
   },
   { 
     title: "4. Visite di follow-up", 
@@ -81,7 +81,7 @@ const steps = [
 <style scoped>
 
 .visit {
-  margin-top: 0;
+  margin-top: 3%;
   width: 100%;
   height: 100%;
   background-color: #f9f5f0;
@@ -177,7 +177,7 @@ const steps = [
   }
 
   .separator-image {
-    width: 90%;
+    width: 100%;
     max-width: 600px; 
   }
 }

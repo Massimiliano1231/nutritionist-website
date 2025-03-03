@@ -3,7 +3,7 @@
     <div class="row">
 
       <div class="col-lg-5 image-container">
-        <img src="/home_banner.png" alt="Dott. Domenico Silvestri" class="img-fluid rounded">
+        <img :src="getImageUrl()" alt="Dott. Domenico Silvestri" class="img-fluid rounded">
       </div>
 
 
@@ -34,6 +34,10 @@
 </template>
 
 <script setup>
+
+
+const getImageUrl = () => "/DSC3382.JPG";
+
 const description = "L’alimentazione gioca un ruolo fondamentale nella prevenzione e nella gestione di molte patologie. Offro supporto nutrizionale per chi soffre di:\n\n1. Patologie metaboliche: diabete di tipo 1 e 2, insulino-resistenza, dislipidemie, sindrome metabolica, obesità, ipertiroidismo e ipotiroidismo, sindrome dell'intestino irritabile ed endometriosi.\n\n2. Patologie gastrointestinali: reflusso gastroesofageo, gastrite, colon irritabile (IBS), malattia di Crohn e colite ulcerosa (MICI), celiachia, intolleranze alimentari (lattosio, FODMAPs, nichel, istamina), disbiosi intestinale, gonfiore addominale, stipsi e diarrea cronica.\n\n3. Patologie autoimmuni e infiammatorie: Tiroidite di Hashimoto, Artrite reumatoide, Sclerosi multipla, Fibromialgia, Psoriasi e dermatite atopica.\n\n4. Patologie epatiche e renali: Steatosi epatica (fegato grasso), insufficienza renale, calcolosi renale (calcoli ai reni).";
 
 const description1 = "Le esigenze nutrizionali della donna cambiano nel tempo e meritano un’attenzione specifica.\n\nMi occupo di:\n\n1. Menopausa e invecchiamento: strategie nutrizionali per contrastare l’aumento di peso, la perdita di massa muscolare e il rallentamento metabolico tipici di questa fase.\n\n2. Linfedema e lipedema: grazie al mio percorso di studi in Scienze delle attività motorie e sportive, offro alle mie pazienti strategie di allenamento specifiche e ben supportate a livello nutrizionale per ridurre infiammazione e ritenzione di liquidi, migliorando la qualità della vita.\n\n3. Cellulite e ritenzione idrica: sebbene spesso confuse, la cellulite è un’infiammazione del tessuto adiposo, mentre la ritenzione idrica è un accumulo eccessivo di liquidi. Un piano nutrizionale corretto affiancato ad un adeguato allenamento aiuta a ridurre entrambi, migliorando la circolazione e la tonicità della pelle.";
@@ -68,7 +72,7 @@ const strengths = [
 
 .image-container img {
   width: 100%;
-  height: 100%; 
+  height: auto; 
   border-radius: 20px;
   margin-left: 5%;
 }
@@ -136,7 +140,6 @@ const strengths = [
   margin-bottom: 10px;
 }
 
-/* 📱 MEDIA QUERY PER TABLET (max 1024px) */
 @media (max-width: 1024px) {
   .about-container {
     padding-top: 20%;
@@ -203,7 +206,6 @@ const strengths = [
   
 
 
-/* 📱 MEDIA QUERY PER TELEFONO (max 768px) */
 @media (max-width: 768px) {
   .about-container {
     padding-top: 50%;

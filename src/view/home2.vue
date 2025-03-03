@@ -2,14 +2,13 @@
 <div class="home">
 
     <div class="banner">
-      <img src="/imgHomeAlta12.jpg" alt="Team di nutrizionisti" class="full-width">
-    </div>
+      <img :src="bannerImage" alt="Domenico Silvestri" class="full-width">
+      </div>
 
     <section class="story">
 
   <div class="row1">
     <h2>Dottor Domenico Silvestri</h2>
-    <!-- Colonna per il testo -->
     <div class="coll">
 <p>
   Sono il <strong>Dott. Domenico Silvestri</strong>, <strong>biologo nutrizionista e chinesiologo</strong>. Dopo la laurea in <strong>Scienze delle Attività Motorie e Sportive</strong> a Bologna, ho scelto di approfondire il legame tra nutrizione e benessere con una magistrale in <strong>Biologia della Salute, curriculum nutrizionale</strong>.
@@ -29,14 +28,10 @@
 
     </div>
 
-    <!-- Colonna per l'immagine 
-    <div class="colll">
-      <img src="/home_banner.png" alt="Nutrizionista" class="img-fluid rounded story-img">
-    </div> -->
+   
   </div>
 </section>
 
- <!-- sezione 6 punti -->
  <section class="benefits-section">
   <h2 class="section-title">6 Motivi per affidarsi ad un nutrizionista</h2>
   
@@ -58,27 +53,27 @@
   <h2 class="section-title">Specializzato in:</h2>
   <div class="services-grid">
     <div class="service-item">
-      <img src="/home_banner.png" alt="Dimagrimento e perdita di peso">
+      <img :src="getImageUrlDim()" alt="Dimagrimento e perdita di peso">
       <p>Dimagrimento e perdita di peso</p>
     </div>
     <div class="service-item">
-      <img src="/home_banner.png" alt="Ricomposizione corporea e aumento di peso">
+      <img :src="getImageUrAum()" alt="Ricomposizione corporea e aumento di peso">
       <p>Ricomposizione corporea e aumento di peso</p>
     </div>
     <div class="service-item">
-      <img src="/home_banner.png" alt="Alimentazione per atleti e sportivi">
+      <img :src="getImageUrlAtleti()" alt="Alimentazione per atleti e sportivi">
       <p>Alimentazione per atleti e sportivi</p>
     </div>
     <div class="service-item">
-      <img src="/home_banner.png" alt="Nutrizione femminile">
+      <img :src="getImageUrlFem()" alt="Nutrizione femminile">
       <p>Nutrizione femminile: salute e benessere nelle diverse fasi della vita</p>
     </div>
     <div class="service-item">
-      <img src="/home_banner.png" alt="Nutrizione e condizioni patologiche">
+      <img :src="getImageUrlPat()" alt="Nutrizione e condizioni patologiche">
       <p>Nutrizione e condizioni patologiche</p>
     </div>
     <div class="service-item">
-      <img src="/home_banner.png" alt="Patologie gastrointestinali">
+      <img :src="getImageUrlGastro()" alt="Patologie gastrointestinali">
       <p>Patologie gastrointestinali</p>
     </div>
   </div>
@@ -133,9 +128,7 @@
         <div class="brand">
         </div>
         <h2 class="footer-title">CONTATTI</h2>
-      <!--  <p class="footer-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, illum officia soluta aliquid asperiores mollitia culpa exercitationem totam, accusantium hic nobis. Maxime obcaecati, quisquam architecto dignissimos eveniet aperiam possimus eligendi..
-        </p> -->
+
         <div class="contact-info">
           <div class="contact-item">
             <img src="/icons/email.svg" alt="Email" class="contact-icon" />
@@ -172,7 +165,35 @@
 
 <script setup>
 import { ref } from "vue";
+import { computed, onMounted, onUnmounted } from "vue";
 
+const getImageUrlDim = () => "/dim1.jpg";
+const getImageUrAum = () => "/aumento.jpg";
+const getImageUrlAtleti = () => "/sportivi.jpg";
+const getImageUrlFem = () => "/femminile.jpg";
+const getImageUrlPat = () => "/patologie.jpg";
+const getImageUrlGastro = () => "/gastro.jpg";
+
+const bannerDesktop = "/bn.png"; 
+const bannerMobile = "/DSC3354P1.JPG";
+
+const windowWidth = ref(window.innerWidth);
+
+const updateWidth = () => {
+  windowWidth.value = window.innerWidth;
+};
+
+onMounted(() => {
+  window.addEventListener("resize", updateWidth);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", updateWidth);
+});
+
+const bannerImage = computed(() => {
+  return windowWidth.value > 1024 ? bannerDesktop : bannerMobile;
+});
 
 
 const activeIndex = ref(null);
@@ -228,13 +249,13 @@ const benefits = ref([
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%; 
-    height: 80%;
-  object-fit: cover; 
+    width: 100%; 
+    height:100%;
+  object-fit: contain;
   }
 
 .story {
-    margin-top: -5%;
+    margin-top: 2%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -295,10 +316,10 @@ const benefits = ref([
 }
 
 .service-item img {
-  width: 100%;  /* Usa percentuale per adattabilità */
-  max-width: 300px; /* Limita la grandezza su schermi grandi */
-  min-width: 180px; /* Evita che diventino troppo piccole su mobile */
-  aspect-ratio: 1/1; /* Mantiene sempre il rapporto 1:1 */
+  width: 100%;  
+  max-width: 300px; 
+  min-width: 180px;
+  aspect-ratio: 1/1; 
   border-radius: 50%;
   object-fit: cover;
   border: 5px solid white;
@@ -545,7 +566,7 @@ const benefits = ref([
 
 .map-title {
   text-align: center;
-  margin-bottom: 10px; /* Adjust spacing */
+  margin-bottom: 10px; 
 }
 .contatti {
   padding-bottom: 50px;
@@ -575,7 +596,6 @@ p {
 }
 
 
-/* per flip card*/
 
 .benefits-section {
   display: flex;
@@ -588,7 +608,6 @@ p {
   margin: 0 auto;
 }
 
-/* Titolo */
 .section-title {
   font-size: 2.5rem;
   font-weight: bold;
@@ -596,7 +615,6 @@ p {
   text-transform: uppercase;
 }
 
-/* Lista benefici */
 .benefits-list {
   list-style: none;
   padding: 0;
@@ -610,21 +628,18 @@ p {
   gap: 10px;
 }
 
-/* Icona di check */
 .check-icon {
   font-size: 1.6rem;
-  color: #ffffff; /* Bianco */
+  color: #ffffff; 
 }
 
-/* Testo in evidenza */
 .highlight-text {
   font-size: 1.4rem;
   font-weight: bold;
-  color: #e67e22; /* Arancione */
+  color: #e67e22; 
   margin-top: 20px;
 }
 
-/* Pulsante */
 .cta-button {
   background-color: #e67e22;
   color: white;
@@ -666,12 +681,12 @@ p {
 }
 
   .services-grid {
-    grid-template-columns: repeat(2, 1fr); /* Passa a 2 colonne */
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
 
   .service-item img {
-    width: 60%; /* Aumenta per migliore leggibilità */
+    width: 60%; 
   }
 
   .coll p {
@@ -730,7 +745,6 @@ p {
   
 }
 
-/* 📱 MEDIA QUERY PER TELEFONO (max 768px) */
 @media (max-width: 768px) {
 
     .home{
@@ -747,11 +761,11 @@ p {
     margin-top: 10%;
 }
   .services-grid {
-    grid-template-columns: repeat(1, 1fr); /* Stack verticale */
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .service-item img {
-    width: 50%; /* Aumenta la visibilità su mobile */
+    width: 50%; 
   }
 
   .section-title {
@@ -814,14 +828,14 @@ p {
   }
 
   .benefits-section {
-    text-align: left; /* Allinea tutto a sinistra */
+    text-align: left; 
     padding: 40px 20px;
   }
 
   .benefits-list {
     list-style: none;
     padding: 0;
-    margin-left: 0; /* Rimuove eventuali margini a sinistra */
+    margin-left: 0; 
   }
 
   .benefits-list li {
@@ -829,19 +843,19 @@ p {
     align-items: flex-start;
     gap: 10px;
     font-size: 1.1rem;
-    flex-wrap: wrap; /* Permette di mandare a capo solo quando necessario */
+    flex-wrap: wrap; 
   }
 
   .check-icon {
     font-size: 1.4rem;
-    flex-shrink: 0; /* Mantiene la dimensione fissa dell'icona */
-    margin-top: 4px; /* Allinea meglio con il testo */
+    flex-shrink: 0;
+    margin-top: 4px; 
   }
 
   .benefits-list li strong {
     display: inline;
     margin-right: 5px;
-    white-space: nowrap; /* Impedisce che il titolo vada a capo separato dalla descrizione */
+    white-space: nowrap;
   }
 
 }
