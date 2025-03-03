@@ -3,6 +3,9 @@
 
     <div class="banner">
       <img :src="bannerImage" alt="Domenico Silvestri" class="full-width">
+      <div class="banner-text">
+    <p>"La salute é ricchezza" - Gandhi</p>
+  </div>
       </div>
 
     <section class="story">
@@ -130,30 +133,46 @@
         <h2 class="footer-title">CONTATTI</h2>
 
         <div class="contact-info">
-          <div class="contact-item">
-            <img src="/icons/email.svg" alt="Email" class="contact-icon" />
-                  <div>
-              <h3>Email</h3>
-              <p>domenicosilvestri.1995@gmail.com</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span class="icon">📞</span>
-            <div>
-              <h3>Telefono</h3>
-              <p>(+39) 375 683 6881</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <img src="/icons/whatsapp.svg" alt="WhatsApp" class="contact-icon" />
-                <div>
-              <h3>Whatsapp</h3>
-              <a href="https://wa.me/393756836881" target="_blank" class="whatsapp-button">
-                 Scrivimi su WhatsApp
-              </a>  
-            </div>
-          </div>
-        </div>
+  <div class="contact-row">
+    <div class="contact-item">
+      <img src="/icons/email.svg" alt="Email" class="contact-icon" />
+      <div>
+        <h3>Email</h3>
+        <p>domenicosilvestri.1995@gmail.com</p>
+      </div>
+    </div>
+    <div class="contact-item">
+      <img src="/icons/phone.svg" alt="Telefono" class="contact-icon" />
+      <div>
+        <h3>Telefono</h3>
+        <p>(+39) 375 683 6881</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-row">
+    <div class="contact-item">
+      <img src="/icons/whatsapp.svg" alt="WhatsApp" class="contact-icon" />
+      <div>
+        <h3>Whatsapp</h3>
+        <a href="https://wa.me/393756836881" target="_blank" class="whatsapp-button">
+          Scrivimi su WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="contact-item">
+      <img src="/icons/telefono.svg" alt="Instagram" class="contact-icon" />
+      <div>
+        <h3>Instagram</h3>
+        <a href="https://www.instagram.com/ilsegretodelnutrizionista?igsh=ZGl4YWF6YzZzdmQ3" target="_blank" class="instagram-button">
+          Seguimi su Instagram
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
       </div>
       <p class="footer-bottom">© 2025 DOTT. DOMENICO SILVESTRI - PIANORO (BO). Informativa sulla Privacy
 </p>
@@ -164,6 +183,7 @@
 </template>
 
 <script setup>
+import '@fortawesome/fontawesome-free/css/all.css';
 import { ref } from "vue";
 import { computed, onMounted, onUnmounted } from "vue";
 
@@ -230,7 +250,30 @@ const benefits = ref([
 </script>
 
 
+
 <style scoped >
+
+.banner-text {
+  position: absolute;
+  bottom: 5%; /* Posizionamento dal basso */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 90%;
+  font-style: italic;
+  font-family: 'Arial', sans-serif;
+}
+.banner-text p {
+  font-weight: bold;
+  color: black;
+}
+
+
+
  .home {    
     margin-top: 3%;
     padding-top: 3%;
@@ -240,6 +283,8 @@ const benefits = ref([
   background-color: #f9f5f0;
   }
     .banner {
+      position: relative;
+      width: 100%;
        margin-top: 50px;
        height: 60%;
        background-color: #f9f5f0;
@@ -473,54 +518,67 @@ const benefits = ref([
   margin-bottom: 5%;
 }
 
+
 .contact-info {
   display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
+  justify-content: center; /* Allinea al centro */
+  align-items: center;
+  gap: 80px; /* Spazio tra gli elementi */
+  flex-wrap: nowrap; /* Impedisce il ritorno a capo */
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .contact-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 15px;
+  text-align: center;
+  gap: 8px;
 }
 
-.icon {
-  font-size: 2rem;
+.contact-icon {
+  width: 40px; /* Icone più grandi */
+  height: 40px;
 }
 
-.whatsapp-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white; 
-  color: #3e4f40; 
+.whatsapp-button,
+.instagram-button {
+  display: inline-block;
   font-size: 0.8rem;
   font-weight: bold;
-  border: 2px solid #3e4f40; 
-  padding: 12px 20px;
-  border-radius: 30px; 
+  padding: 6px 14px; /* Un po' più di padding per leggibilità */
+  border-radius: 15px;
+  border: 2px solid black; /* Bordo nero */
+  background-color: white; /* Sfondo bianco */
+  color: black; /* Testo nero */
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  white-space: nowrap; /* Evita che il testo vada a capo */
 }
 
-.whatsapp-button:hover {
-  background-color: #f9f9f9; 
-  transform: scale(1.05);
+/* Effetto hover */
+.whatsapp-button:hover,
+.instagram-button:hover {
+  background-color: black; /* Cambia sfondo in nero */
+  color: white; /* Cambia testo in bianco */
+  transform: scale(1.05); /* Leggero ingrandimento */
 }
 
-.whatsapp-button:active {
-  transform: scale(0.98);
+
+@media (max-width: 768px) {
+  .contact-info {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
 }
 
-.whatsapp-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  filter: grayscale(100%) contrast(1.2); 
-}
+
+
+
 
 
 
@@ -856,6 +914,10 @@ p {
     display: inline;
     margin-right: 5px;
     white-space: nowrap;
+  }
+  .contact-info {
+    flex-direction: column;
+    gap: 20px;
   }
 
 }

@@ -40,7 +40,7 @@ const faqs = ref([
   },
   { 
     question: "Devo portare gli esami del sangue alla prima visita?", 
-    answer: "Sì, sarebbe molto utile! Se hai esami del sangue recenti (preferibilmente degli ultimi 6 mesi), portali con te alla prima visita. Questo mi aiuterà a comprendere meglio il tuo stato di salute e a impostare un piano nutrizionale ancora più personalizzato. Se non li hai, posso consigliarti quali analisi fare." 
+    answer: "Sì, sarebbe molto utile! Se hai esami del sangue recenti (preferibilmente degli ultimi 6 mesi), portali con te alla prima visita. Questo mi aiuterà a comprendere meglio il tuo stato di salute e a impostare un piano nutrizionale ancora più personalizzato." 
   },
   { 
     question: "Posso mangiare fuori senza compromettere il mio percorso?", 
@@ -56,7 +56,7 @@ const faqs = ref([
   },
   { 
     question: "Perché devo fare la bioimpedenziometria e altre misurazioni?", 
-    answer: "La BIA (bioimpedenziometria) è uno strumento di analisi che ci permette di capire davvero come sta il tuo corpo, andando oltre il semplice numero sulla bilancia. Grazie a questa valutazione possiamo misurare idratazione, ritenzione idrica, composizione corporea e metabolismo basale. Queste informazioni ci aiuteranno a costruire un piano alimentare su misura per te!" 
+    answer: "La BIA (bioimpedenziometria) è uno strumento di analisi che mi permette di capire davvero come sta il tuo corpo, andando oltre il semplice numero sulla bilancia. Grazie a questa valutazione posso misurare idratazione, ritenzione idrica, composizione corporea e metabolismo basale. Queste informazioni mi aiuteranno a costruire un piano alimentare su misura per te!" 
   },
   { 
     question: "Il piano nutrizionale sarà uguale per sempre?", 

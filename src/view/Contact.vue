@@ -19,16 +19,18 @@
         <h2>Dove trovarmi</h2>
        <!-- <p class="subtitle"><strong>Studio di xxxxx</strong></p> -->
         <p class="address">Via Nazionale, 106/2, 40065<br>Pianoro (BO)</p>
+        <p class="address">Via Calabria, 4, 40139 <br>Bologna (BO)</p>
 
         <h3 class="orari">Orari</h3>
-        <p><strong>Lun - Ven:</strong> 9:00 - 17:00</p>
-        <p><strong>Sab:</strong> 9:00 - 12:00</p>
+        <p><strong>Lun - Ven:</strong> 9:00 - 20:00</p>
+        <p><strong>Sab:</strong> 9:00 - 18:00</p>
       </div>
     </div>
 
 
     <div class="contact-row">
-  <div class="footer-contact">
+
+ <!-- <div class="footer-contact">
     <h2 class="contatti">contatti</h2>
     <div class="contact-items">
       <div class="contact-item">
@@ -47,7 +49,38 @@
         <a href="https://wa.me/393756836881" target="_blank" class="whatsapp-button">Scrivimi su WhatsApp</a>
       </div>
     </div>
-  </div>
+  </div>-->
+  <div class="footer-contact">
+        <h2 class="contatti">Contatti</h2>
+
+        <!-- Riga 1: Email e Telefono -->
+        <div class="contact-items row">
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <h3>Email</h3>
+            <p>domenicosilvestri.1995@gmail.com</p>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <h3>Telefono</h3>
+            <p>(+39) 375 683 6881</p>
+          </div>
+        </div>
+
+        <!-- Riga 2: WhatsApp e Instagram -->
+        <div class="contact-items row">
+          <div class="contact-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <h3>WhatsApp</h3>
+            <a href="https://wa.me/393756836881" target="_blank" class="whatsapp-button">Scrivimi su WhatsApp</a>
+          </div>
+          <div class="contact-item">
+            <i class="fa-brands fa-instagram"></i>
+            <h3>Instagram</h3>
+            <a href="https://www.instagram.com/ilsegretodelnutrizionista?igsh=ZGl4YWF6YzZzdmQ3" target="_blank" class="instagram-button">@domenicosilvestri</a>
+          </div>
+        </div>
+      </div>
 
   <div class="contact-container">
     <form @submit.prevent="sendEmail">
@@ -336,6 +369,88 @@ button:hover {
   text-align: center;
   border-radius: 10px;
   height: auto;
+}
+
+.footer-contact {
+  margin-top: 2%;
+  background-color: #f8f1e7;
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* Per allineare Email & Telefono sulla stessa riga */
+.contact-items.row {
+  display: flex;
+  justify-content: center;
+  gap: 80px; 
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.contact-item {
+  text-align: center;
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-item i {
+  font-size: 2.5rem;
+  color: #2d2d2d;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 1.4rem;
+  color: #444;
+}
+
+/* Pulsanti WhatsApp e Instagram */
+.whatsapp-button, .instagram-button {
+  display: inline-block;
+  background-color: white; 
+  color: #3e4f40; 
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid #3e4f40; 
+  padding: 12px 20px;
+  border-radius: 30px; 
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.whatsapp-button:hover {
+  background-color: #3d8b40;
+  color: white;
+}
+
+.instagram-button:hover {
+  background-color: #d6249f;
+  color: white;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact-items.row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .contact-item {
+    min-width: 100%;
+  }
+
+  .whatsapp-button, .instagram-button {
+    width: 80%;
+    text-align: center;
+  }
 }
 
 

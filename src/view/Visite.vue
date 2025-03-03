@@ -1,13 +1,13 @@
 <template>
 <div class="visit">
-    <h1 class="title">SVOLGIMENTO DELLE VISITE</h1>
+    <h1 class="title">COME SI SVOLGONO LE VISITE</h1>
 
     <div class="container">
       <div v-for="(step, index) in steps" :key="index" class="step">
         <h2 class="step-title">{{ step.title }}</h2>
         <p class="step-description" v-html="step.description"></p>
         
-        <div v-if="index === 0 || index === 2 || index === 1" class="separator">
+        <div v-if="index === 0 || index === 2 || index === 1 || index === 3" class="separator">
           <img :src="step.image" alt="Separatore" class="separator-image">
         </div>
       </div>
@@ -16,6 +16,8 @@
 </template>
 
 <script setup>
+
+
 
 const description1 = `
 <p>L’inizio del percorso nutrizionale prevede un primo incontro fondamentale per instaurare un rapporto di fiducia reciproca. Questo aiuterà a raggiungere gli obiettivi con serenità e consapevolezza.</p>
@@ -52,12 +54,12 @@ const steps = [
   { 
     title: "1. Prenotazione dell’appuntamento", 
     description : description2,
-    image: "/DSC3363.JPG" 
+    image: "/DSC3356.JPG"   //metti foto studio
   },
   { 
     title: "2. Prima visita", 
     description : description1,
-    image: "/bia.JPG" 
+    image: "/DSC3363.JPG" 
   },
   { 
     title: "3. Consegna del piano nutrizionale", 
@@ -67,7 +69,7 @@ const steps = [
   { 
     title: "4. Visite di follow-up", 
     description : description4,
-    image: "/home_banner.png" 
+    image: "/bia.JPG"  //quella dove sorride 
   }
 /*  { 
     title: "5. Mantenimento e supporto", 
