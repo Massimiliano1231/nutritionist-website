@@ -257,7 +257,7 @@ const benefits = ref([
 
 .banner-text {
   position: absolute;
-  bottom: 5%;
+  bottom: -1%; 
   left: 50%;
   transform: translateX(-50%);
   padding: 15px 30px;
@@ -526,10 +526,10 @@ const benefits = ref([
 
 .contact-info {
   display: flex;
-  justify-content: center; /* Allinea al centro */
+  justify-content: center; 
   align-items: center;
-  gap: 80px; /* Spazio tra gli elementi */
-  flex-wrap: nowrap; /* Impedisce il ritorno a capo */
+  gap: 80px; 
+  flex-wrap: nowrap; 
   text-align: center;
   width: 100%;
   max-width: 1200px;
@@ -539,9 +539,9 @@ const benefits = ref([
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80px; /* Aumenta questo valore per abbassare le icone */
+  gap: 80px; 
   flex-wrap: nowrap;
-  margin-top: 30px; /* Aggiungi margine sopra per abbassarle */
+  margin-top: 30px; 
 }
 
 
@@ -554,7 +554,7 @@ const benefits = ref([
 }
 
 .contact-icon {
-  width: 40px; /* Icone più grandi */
+  width: 40px; 
   height: 40px;
 }
 
@@ -563,23 +563,22 @@ const benefits = ref([
   display: inline-block;
   font-size: 0.8rem;
   font-weight: bold;
-  padding: 6px 14px; /* Un po' più di padding per leggibilità */
+  padding: 6px 14px; 
   border-radius: 15px;
-  border: 2px solid black; /* Bordo nero */
-  background-color: white; /* Sfondo bianco */
-  color: black; /* Testo nero */
+  border: 2px solid black; 
+  background-color: white; 
+  color: black; 
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
-  white-space: nowrap; /* Evita che il testo vada a capo */
+  white-space: nowrap; 
 }
 
-/* Effetto hover */
 .whatsapp-button:hover,
 .instagram-button:hover {
-  background-color: black; /* Cambia sfondo in nero */
-  color: white; /* Cambia testo in bianco */
-  transform: scale(1.05); /* Leggero ingrandimento */
+  background-color: black; 
+  color: white; 
+  transform: scale(1.05); 
 }
 
 
@@ -816,6 +815,8 @@ p {
 
   .banner-text p {
     font-size: 2.0rem;
+    font-weight: bold;
+    font-family: Georgia, serif;
   }
 
   .contact-info {
@@ -861,8 +862,13 @@ p {
 }
 
 @media (max-width: 768px) {
+  .banner-text {
+    bottom: -6%; 
+    font-size: 1.6rem; 
+    width: 90%; 
+  }
   .banner-text p {
-    font-size: 1.4rem;
+    font-size: 1.0rem;
     font-weight: bold;
     font-family: Georgia, serif;
   }
