@@ -4,7 +4,7 @@
     <div class="banner">
       <img :src="bannerImage" alt="Domenico Silvestri" class="full-width">
       <div class="banner-text">
-    <p>"La salute é ricchezza" - Gandhi</p>
+    <p>"La salute é ricchezza" Gandhi</p>
   </div>
       </div>
 
@@ -115,9 +115,10 @@
     </div>
     <div class="info-container">
       <p class="address">Via Nazionale, 106/2, 40065<br>Pianoro (BO)</p>
+      <p class="address">Via Calabria, 4, 40139 <br>Bologna (BO)</p>
       <h3 class="orari">Orari</h3>
-      <p><strong>Lun - Ven:</strong> 9:00 - 17:00</p>
-      <p><strong>Sab:</strong> 9:00 - 12:00</p>
+      <p><strong>Lun - Ven:</strong> 9:00 - 20:00</p>
+      <p><strong>Sab:</strong> 9:00 - 18:00</p>
     </div>
   </div>
 </div>
@@ -252,25 +253,29 @@ const benefits = ref([
 
 
 <style scoped >
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
 .banner-text {
   position: absolute;
-  bottom: 5%; /* Posizionamento dal basso */
+  bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 1.5rem;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 1.8rem;
   text-align: center;
-  width: 90%;
+  width: 80%;
   font-style: italic;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Brush Script MT', cursive;
 }
+
 .banner-text p {
   font-weight: bold;
   color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 2.3rem;
 }
+
 
 
 
@@ -530,6 +535,15 @@ const benefits = ref([
   max-width: 1200px;
   margin: 0 auto;
 }
+.contact-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px; /* Aumenta questo valore per abbassare le icone */
+  flex-wrap: nowrap;
+  margin-top: 30px; /* Aggiungi margine sopra per abbassarle */
+}
+
 
 .contact-item {
   display: flex;
@@ -574,6 +588,7 @@ const benefits = ref([
     flex-wrap: wrap;
     gap: 40px;
   }
+
 }
 
 
@@ -799,11 +814,58 @@ p {
     padding: 10px 20px;
   }
 
-  
-  
+  .banner-text p {
+    font-size: 2.0rem;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-item {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .contact-icon {
+    margin-right: 10px;
+  }
+  .contact-item {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  .contact-icon {
+    margin-right: 10px;
+  }
 }
 
 @media (max-width: 768px) {
+  .banner-text p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: Georgia, serif;
+  }
 
     .home{
         margin-top: 20%;
@@ -915,9 +977,27 @@ p {
     margin-right: 5px;
     white-space: nowrap;
   }
+
+  
+  .contact-item {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+  }
+
   .contact-info {
     flex-direction: column;
-    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-icon {
+    margin-right: 10px;
   }
 
 }

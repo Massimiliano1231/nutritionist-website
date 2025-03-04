@@ -29,7 +29,7 @@
 <div class="row1">
   <h1 class="title">Dott. Domenico Silvestri</h1>
   <div class="coll">
-        <h2 class="subtitle">Personal trainer e biologo nutrizionista</h2>
+        <h2 class="subtitle">biologo nutrizionista e personal trainer</h2>
         <p>Il mio <strong>obiettivo</strong> è quello di guidare ogni persona verso uno <strong>stile di vita sano</strong> e <strong>attivo</strong>, attraverso un percorso <strong>piacevole</strong> e <strong>sostenibile</strong>. Credo che l’<strong>alimentazione</strong> non debba essere vissuta come una <strong>restrizione</strong>, ma come un'<strong>opportunità</strong> per migliorare il <strong>benessere</strong>, costruendo nuove <strong>abitudini</strong> con un <strong>piano nutrizionale</strong> <strong>flessibile</strong> e <strong>personalizzato</strong>.</p>
 
 <p>L’<strong>esperienza</strong> maturata lavorando in <strong>team</strong> presso lo studio della <strong>Dott.ssa Gamberini</strong> mi ha permesso di approfondire <strong>conoscenze fondamentali</strong> e di affinare il mio <strong>approccio nutrizionale</strong>. Il <strong>confronto</strong> con altre <strong>figure professionali</strong> è stato una <strong>preziosa occasione di crescita</strong>, che mi ha aiutato a sviluppare <strong>strategie</strong> sempre più <strong>efficaci</strong> per migliorare lo <strong>stato di salute</strong> delle persone.</p>

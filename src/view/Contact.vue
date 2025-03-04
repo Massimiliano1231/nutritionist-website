@@ -650,6 +650,10 @@ p {
     display: flex;
     justify-content: center;
   }
+  .contact-item i.fa-instagram {
+    margin-top: 13%;
+  }
+
 }
 
 </style>
