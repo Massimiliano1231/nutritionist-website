@@ -19,7 +19,6 @@
         <h2>Dove trovarmi</h2>
        <!-- <p class="subtitle"><strong>Studio di xxxxx</strong></p> -->
         <p class="address">Via Nazionale, 106/2, 40065<br>Pianoro (BO)</p>
-        <p class="address">Via Calabria, 4, 40139 <br>Bologna (BO)</p>
 
         <h3 class="orari">Orari</h3>
         <p><strong>Lun - Ven:</strong> 9:00 - 20:00</p>
