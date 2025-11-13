@@ -4,7 +4,7 @@
       <div class="navbar-brand">
         <img src="/favicon.png" alt="Logo" class="logo">
         <div class="brand-text">
-          <span class="name">DOTT. Domenico Silvestri</span>
+          <span class="name">Domenico Silvestri</span>
           <span class="subtitle">Biologo Nutrizionista</span>
         </div>
       </div>
