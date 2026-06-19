@@ -26,6 +26,24 @@
       </div>
     </div>
 
+    <section class="booking-widget-section">
+      <h2>Prenota una visita</h2>
+      <a
+        id="zl-url"
+        class="zl-url"
+        href="https://www.miodottore.it/domenico-silvestri/biologo-nutrizionista/san-lazzaro-di-savena"
+        rel="nofollow"
+        data-zlw-doctor="domenico-silvestri"
+        data-zlw-type="big_with_calendar"
+        data-zlw-opinion="false"
+        data-zlw-hide-branding="true"
+        data-zlw-saas-only="false"
+        data-zlw-a11y-title="Widget di prenotazione visite mediche"
+      >
+        Prenota una visita
+      </a>
+    </section>
+
 
     <div class="contact-row">
 
@@ -112,7 +130,7 @@
 
 
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import emailjs from 'emailjs-com';
 
 const formData = ref({
@@ -146,7 +164,18 @@ const sendEmail = () => {
     });
 };
 
+onMounted(() => {
+  const existingScript = document.getElementById("zl-widget-s");
+  if (existingScript) {
+    existingScript.remove();
+  }
 
+  const script = document.createElement("script");
+  script.id = "zl-widget-s";
+  script.src = "https://platform.docplanner.com/js/widget.js";
+  script.async = true;
+  document.body.appendChild(script);
+});
 
 </script>
 
@@ -220,6 +249,38 @@ p {
   border-radius: 12px;
   overflow: hidden;
 }
+
+.booking-widget-section {
+  width: min(900px, 90%);
+  margin: 60px auto 0;
+  padding: 40px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.booking-widget-section h2 {
+  margin-bottom: 25px;
+}
+
+.zl-url {
+  display: inline-block;
+  color: white;
+  background-color: #4d774e;
+  border: 2px solid #4d774e;
+  border-radius: 8px;
+  padding: 14px 22px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.zl-url:hover {
+  color: #4d774e;
+  background-color: white;
+}
+
 .footer-contact {
   margin-top: 2%;
   background-color: #f8f1e7;
@@ -530,6 +591,11 @@ p {
     margin: 0 auto;
     padding: 20px;
   }
+
+  .booking-widget-section {
+    width: 90%;
+    padding: 25px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -648,6 +714,21 @@ p {
   .contact-container {
     display: flex;
     justify-content: center;
+  }
+
+  .booking-widget-section {
+    width: 92%;
+    margin-top: 30px;
+    padding: 20px;
+  }
+
+  .booking-widget-section h2 {
+    font-size: 2rem;
+  }
+
+  .zl-url {
+    font-size: 1rem;
+    padding: 12px 16px;
   }
   .contact-item i.fa-instagram {
     margin-top: 13%;

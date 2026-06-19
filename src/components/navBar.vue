@@ -20,6 +20,17 @@
           <li><router-link to="/visite" @click="closeNavbar">Visite</router-link></li>
           <li><router-link to="/faq" @click="closeNavbar">FAQ</router-link></li>
           <li><router-link to="/contatti" @click="closeNavbar">Dove trovarmi</router-link></li>
+          <li>
+            <a
+              class="booking-link"
+              href="https://www.miodottore.it/domenico-silvestri/biologo-nutrizionista/san-lazzaro-di-savena?utm_source=widget-null&utm_medium=link"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              @click="closeNavbar"
+            >
+              Prenota
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -102,8 +113,9 @@ const closeNavbar = () => {
 .navbar-links ul {
   list-style: none;
   display: flex;
-  gap: 40px;
+  gap: 28px;
   padding: 0;
+  align-items: center;
 }
 
 .navbar-links ul li {
@@ -120,6 +132,19 @@ const closeNavbar = () => {
 
 .navbar-links ul li a:hover {
   color: #4d774e;
+}
+
+.navbar-links ul li a.booking-link {
+  color: white;
+  background-color: #4d774e;
+  border: 2px solid #4d774e;
+  border-radius: 8px;
+  padding: 10px 16px;
+}
+
+.navbar-links ul li a.booking-link:hover {
+  color: #4d774e;
+  background-color: white;
 }
 
 /* Menu mobile & tablet */
@@ -221,4 +246,3 @@ const closeNavbar = () => {
   }
 }
 </style>
-
