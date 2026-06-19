@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="container">
       <div class="navbar-brand">
-        <img src="/favicon.png" alt="Logo" class="logo">
+        <img src="/Logo_nuovo.jpeg" alt="Logo" class="logo">
         <div class="brand-text">
           <span class="name">Domenico Silvestri</span>
           <span class="subtitle">Biologo Nutrizionista</span>
@@ -221,5 +221,4 @@ const closeNavbar = () => {
   }
 }
 </style>
-
 
